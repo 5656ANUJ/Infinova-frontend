@@ -1,7 +1,8 @@
 import React from 'react'
 // import EduventuresForUniversitiesNavbar from '../../components/EduventuresForUniversitiesNavbar'
 import EduventuresForUniversitiesNavbar from '../../components/EduventuresForUniversitiesNavbarNew'
-import EduventuresForUniversitiesHeroSection from './EduventuresForUniversitiesHeroSection'
+// import EduventuresForUniversitiesHeroSection from './EduventuresForUniversitiesHeroSection'
+import EduventuresUnversitiessHero from './EduventuresUniversititesHeroNew'
 import EduventuresUniversitiesContact from './EduventuresUniversitiesContact'
 import EduventuresCourses from './EduventuresCourses'
 import EduventuresTrainers from './EduventuresTrainers'
@@ -11,7 +12,8 @@ const EduventuresForUniversities = () => {
    <>
    <div className='w-[100vw] min-h-[100vh] '>
     <EduventuresForUniversitiesNavbar/>
-    <EduventuresForUniversitiesHeroSection/>
+    {/* <EduventuresForUniversitiesHeroSection/> */}
+    <EduventuresUnversitiessHero/>
     <EduventuresUniversitiesContact/>
     <EduventuresCourses/>
     <EduventuresTrainers/>

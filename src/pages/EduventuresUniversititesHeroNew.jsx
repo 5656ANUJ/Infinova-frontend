@@ -1,7 +1,7 @@
 import React from 'react';
-import '../global.css';
+import '../../global.css';
 
-const EduventuresForStudentsHeroSection = () => {
+const EduventuresUnversitiessHero = () => {
   return (
     <div
       className="w-full"
@@ -20,16 +20,16 @@ const EduventuresForStudentsHeroSection = () => {
             
             {/* Split lines */}
             <h1 className="font-extrabold leading-snug text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900">
-              Your Dream Career is
+              The perfect <span className="text-blue-600">Training</span>
             </h1>
             <h1 className="font-extrabold leading-snug text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900">
-              One Skill Away, Join
+              & <span className="text-blue-600">Placement</span>
             </h1>
             <h1 className="font-extrabold leading-snug text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900">
-              <span className="text-blue-600">Infinova Eduventures</span>
+              Solutions for Your
             </h1>
             <h1 className="font-extrabold leading-snug text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 text-gray-900">
-              Now!!!
+             Campus
             </h1>
             <div className="h-5"></div>
             <button className="contact-btn lg:mt-3">
@@ -41,7 +41,7 @@ const EduventuresForStudentsHeroSection = () => {
         {/* Right Side (Image) */}
         <div className="w-full md:w-1/2 flex items-center justify-center p-4">
           <img 
-            src="/student-heri-img.png"
+            src="../ourPartners.png"
             alt="Student to Professional Transformation"
             className="w-full h-full object-contain"
           />
@@ -51,4 +51,4 @@ const EduventuresForStudentsHeroSection = () => {
   );
 };
 
-export default EduventuresForStudentsHeroSection;
+export default EduventuresUnversitiessHero;
