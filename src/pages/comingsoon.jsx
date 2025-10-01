@@ -26,7 +26,7 @@ const ComingSoon = () => {
     <div className="coming-soon-container">
       {/* Header with Logo */}
       <header className="header">
-        <div className="logo-container">
+        <div className="logo-container"  id='shift'>
          
         </div>
       </header>
@@ -36,10 +36,10 @@ const ComingSoon = () => {
         <div className="content-wrapper">
           <div className="text-section">
             <p className="subtitle">WE'RE STILL</p>
-            <h1 className="main-title">
+            <h1 className="main-title"style={{color: "#2D3748"}}>
               Cooking our <span className="highlight">Website</span>
             </h1>
-            <p className="description">
+            <p className="description"style={{color: "#4A5568"}}>
               we are going to launch our website very soon
             </p>
             <p className="stay-tuned">
