@@ -2943,8 +2943,9 @@ ion-icon {
 /* Email Subscription */
 .subscription-section {
   width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
+  max-width: 500px; 
+  /* margin-top: 20px; */
+  margin: 10px 0px 0px 0px;
 }
 
 .email-form {
