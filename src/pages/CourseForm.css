@@ -1,0 +1,410 @@
+/* CourseForm.css */
+
+.course-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.course-form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Course Info Section */
+.course-info-section {
+  padding: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.course-info-image {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-info-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.course-info-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.course-info-trainer {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Form Section */
+.form-section {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-title-highlight {
+  color: #667eea;
+}
+
+/* Form Message */
+.form-message {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+.form-message-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Inputs */
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-input {
+  padding: 1rem 1.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.phone-input-container:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.phone-country-code {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 1rem 0;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Submit Button */
+.form-submit-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.form-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.form-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-arrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.form-submit-btn:hover:not(:disabled) .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* OTP Section */
+.otp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.otp-info {
+  text-align: center;
+}
+
+.otp-info h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.otp-info p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.otp-info strong {
+  color: #667eea;
+}
+
+/* OTP Input Container */
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.otp-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.otp-input:not(:placeholder-shown) {
+  border-color: #667eea;
+  background-color: #f7fafc;
+}
+
+/* OTP Clear Button */
+.otp-clear-container {
+  display: flex;
+  justify-content: center;
+}
+
+.otp-clear-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.otp-clear-btn:hover {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+/* OTP Actions */
+.otp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.otp-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.otp-link-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.otp-link-btn:hover:not(:disabled) {
+  color: #764ba2;
+}
+
+.otp-link-btn:disabled {
+  color: #a0aec0;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .course-form-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .course-info-section {
+    padding: 2rem;
+  }
+
+  .course-info-image {
+    max-width: 250px;
+    height: 180px;
+  }
+
+  .course-info-title {
+    font-size: 1.75rem;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .course-form-container {
+    padding: 1rem;
+  }
+
+  .course-info-section {
+    padding: 1.5rem;
+  }
+
+  .course-info-image {
+    max-width: 200px;
+    height: 150px;
+  }
+
+  .course-info-title {
+    font-size: 1.5rem;
+  }
+
+  .course-info-description {
+    font-size: 1rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .otp-input-container {
+    gap: 0.75rem;
+  }
+
+  .otp-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .otp-input-container {
+    gap: 0.5rem;
+  }
+
+  .form-submit-btn {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
