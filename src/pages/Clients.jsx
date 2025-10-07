@@ -58,26 +58,26 @@ const Clients = () => {
         <div className="stats-card bg-[#FFF3E3] flex items-center flex-col">
           <Users className="stats-icon" />
 
-          <h3 className="stats-number">30+</h3>
+          <h3 className="stats-number">10+</h3>
           <p className="stats-label" id="stats-Team">Teams</p>
         </div>
        
 
         <div className="stats-card bg-[#FFEEEE] flex items-center flex-col">
           <TrendingUp className="stats-icon" />
-          <h3 className="stats-number">45+</h3>
+          <h3 className="stats-number">10000+</h3>
           <p className="stats-label">Happy Students</p>
         </div>
 
         <div className="stats-card bg-[#E4FAFF] flex items-center flex-col">
           <Award className="stats-icon" />
-          <h3 className="stats-number">12+</h3>
+          <h3 className="stats-number">5+</h3>
           <p className="stats-label uppercase">Award Winning</p>
         </div>
 
         <div className="stats-card bg-[#ECE7FF] flex items-center flex-col">
           <Briefcase className="stats-icon" />
-          <h3 className="stats-number">150+</h3>
+          <h3 className="stats-number">100+</h3>
           <p className="stats-label">Partners</p>
         </div>
       </div>

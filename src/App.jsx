@@ -11,6 +11,7 @@ import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
 import Blog from "./pages/Blog";
 import ComingSoon from "./pages/comingsoon";
+import Courses from "./pages/EduventuresCourses";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/vision" element={<Vision />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/courses" element={<Courses />} />
       </Route>
 
       {/* Standalone pages with unique Navbar/Footer */}

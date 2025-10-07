@@ -24,22 +24,7 @@ const CeoPage = () => {
             </h1>
           </div>
           <p className="ceo-text text-[#053C66] text-base sm:text-lg md:text-xl font-medium leading-relaxed">
-            The CEO is a visionary leader with over 7 years of professional
-            experience in corporate training, student development, and career
-            readiness. With a mechanical engineering foundation and a proven
-            track record in skill development, the CEO has impacted more than
-            20,000 individuals across 50+ colleges and institutes. Over the
-            years, the CEO has collaborated as a freelance trainer with some of
-            the world’s most respected organizations, including Microsoft,
-            Bajaj, TVS, TeamLease, Barclays, Skoda, Endurance, Greenpack, Atos,
-            Accenture, and many others. These engagements reflect a deep ability
-            to adapt across industries and deliver programs that create
-            measurable impact. Coming from a military background and having
-            appeared multiple times for AFSB (Air Force Selection Board) and SSB
-            (Services Selection Board), the CEO embodies the values of
-            discipline, resilience, and leadership under pressure. These
-            qualities shape every training program and professional engagement,
-            ensuring both structure and inspiration in the learning journey
+           The CEO is a visionary leader with over 7 years of experience in corporate training, student development, and career readiness. With a background in mechanical engineering and a strong record in skill development, the CEO has impacted 20,000+ individuals across 50+ colleges and institutes. Over the years, they have collaborated as a freelance trainer with globally respected organizations such as Microsoft, Bajaj, TVS, TeamLease, Barclays, Skoda, Endurance, Greenpack, Atos, and Accenture—demonstrating adaptability across industries and the ability to deliver measurable results. Coming from a military background and having appeared multiple times for AFSB and SSB, the CEO embodies discipline, resilience, and leadership under pressure—qualities that define every training program and professional engagement.
           </p>
         </div>
       </div>

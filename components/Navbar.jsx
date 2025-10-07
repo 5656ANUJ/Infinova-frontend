@@ -43,27 +43,27 @@ const Navbar = () => {
                   Eduventures
                 </li>
               </NavLink>
-              <NavLink to="/consultants">
+              <NavLink to="/coming-soon">
                 <li className="cursor-pointer listItems text-gray-800 py-2 hover:text-blue-600 transition-colors" onClick={handleClick}>
                   Consultants
                 </li>
               </NavLink>
-              <NavLink to="/technology">
+              <NavLink to="/coming-soon">
                 <li className="cursor-pointer listItems text-gray-800 py-2 hover:text-blue-600 transition-colors" onClick={handleClick}>
                   Technology
                 </li>
               </NavLink>
-              <NavLink to="/mission">
+              <NavLink to="/coming-soon">
                 <li className="cursor-pointer listItems text-gray-800 py-2 hover:text-blue-600 transition-colors" onClick={handleClick}>
                   Mission
                 </li>
               </NavLink>
-              <NavLink to="/vision">
+              <NavLink to="/coming-soon">
                 <li className="cursor-pointer listItems text-gray-800 py-2 hover:text-blue-600 transition-colors" onClick={handleClick}>
                   Vision
                 </li>
               </NavLink>
-              <NavLink to="/blog">
+              <NavLink to="/coming-soon">
                 <li className="cursor-pointer listItems text-gray-800 py-2 hover:text-blue-600 transition-colors" onClick={handleClick}>
                   Blog
                 </li>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import EduventuresForStudentsNavbar from '../../components/EduventuresForStudentsNavbar'
 import Navbar from '../../components/EduventuresForStudentsNavbarNew'
 // import EduventuresForStudentsHeroSection from '../../components/EduventuresForStudentsHeroSection'
@@ -11,8 +11,15 @@ import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresF
 
 import EduventuresCourses from './EduventuresCourses'
 
+import { useLocation } from 'react-router-dom';
+
 
 const EduventuresForStudents = () => {
+  const location = useLocation(); // 👈 required to track route changes
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // 👈 scroll to top on route change
+  }, [location.pathname]);
   return (
     <div>
       <Navbar/>

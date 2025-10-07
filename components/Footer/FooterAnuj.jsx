@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const FooterAnuj = () => {
+  
   return (
     <footer className="footer-wrapper">
       {/* ===== Upper Blue Section ===== */}
@@ -28,13 +30,19 @@ const FooterAnuj = () => {
             <h3 className="footer-links-title">Our Divisions</h3>
             <ul className="footer-links">
               <li>
-                <a href="#">Infinova Eduventures</a>
+                <NavLink to="/eduventures/forstudents"
+               className="cursor-pointer hover:text-blue-600 transition-colors " >Infinova Eduventures
+            </NavLink>
               </li>
               <li>
-                <a href="#">Infinova consultants</a>
+               <NavLink to="/coming-soon"
+               className="cursor-pointer hover:text-blue-600 transition-colors " >Infinova Consultants
+            </NavLink>
               </li>
               <li>
-                <a href="#">Infinova Technologies</a>
+               <NavLink to="/coming-soon"
+               className="cursor-pointer hover:text-blue-600 transition-colors " >Infinova technologies
+            </NavLink>
               </li>
             </ul>
           </div>
@@ -44,23 +52,35 @@ const FooterAnuj = () => {
             <h3 className="footer-links-title">Quick Links</h3>
             <ul className="footer-links">
               <li>
-                <a href="#">Courses</a>
-              </li>
-              <li>
-                <a href="#">Internships</a>
-              </li>
-              <li>
-                <a href="#">Career</a>
-              </li>
-              <li>
-                <a href="#">Hiring Solutions</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
+    <NavLink to="/courses" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Courses
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Internships
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/careers" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Career
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Hiring Solutions
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Privacy Policy
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">
+      Terms & Conditions
+    </NavLink>
+  </li>
             </ul>
           </div>
 
@@ -70,16 +90,14 @@ const FooterAnuj = () => {
             <ul className="footer-links">
               <li className="footer-contact-item">
                 <img src="../../public/telephone.png" alt="Phone" />
-                <p>(480) 555-0103</p>
+                <p>+91 9881068668</p>
               </li>
               <li className="footer-contact-item">
                 <img src="../../public/location.png" alt="Location" />
                 <div>
-                  head office address: Cidco,
-                  <br />
+                  <p>  Head office address: Cidco,
                   Chh.Sambhajinagar/Aurangabad,
-                  <br />
-                  Maharashtra-431001
+                  Maharashtra-431001</p>
                 </div>
               </li>
               <li className="footer-contact-item">

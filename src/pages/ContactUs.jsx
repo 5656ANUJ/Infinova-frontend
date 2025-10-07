@@ -8,34 +8,26 @@ const ContactUs = () => {
   }
   return (
     <div className="contactus-page-container w-[100vw]">
+      <style>
+        {
+          `
+          .contactus-message{
+            padding-bottom:20px;}
+          
+          `
+        }
+      </style>
       {/* Page Heading */}
       <h1 className="contactus-heading text-gray-900 font-bold">
         Get in Touch With Us
       </h1>
 
       <div className="contactus-content">
-        {/* Contact Info */}
-        <div className="contactus-info-card bg-white shadow-xl rounded-2xl transition-transform hover:scale-105">
-          <h2 className="text-gray-800 font-semibold">Contact Information</h2>
-          <div className="contactus-info-list">
-            <p className="flex items-center text-gray-700">
-              <MapPin className="text-blue-600 contactus-icon" /> 
-              123 Business Street, City, Country
-            </p>
-            <p className="flex items-center text-gray-700">
-              <Mail className="text-blue-600 contactus-icon" /> 
-              info@example.com
-            </p>
-            <p className="flex items-center text-gray-700">
-              <Phone className="text-blue-600 contactus-icon" /> 
-              +1 234 567 890
-            </p>
-          </div>
-        </div>
+        
 
         {/* Contact Form */}
         <div className="contactus-form-card bg-white shadow-xl rounded-2xl transition-transform hover:scale-105">
-          <h2 className="text-gray-800 font-semibold">Send Us a Message</h2>
+          <h2 className="contactus-message text-gray-800 font-semibold " >Send Us a Message </h2>
           <form className="contactus-form" onSubmit={handleSubmit}>
             <input
               type="text"
