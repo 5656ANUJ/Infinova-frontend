@@ -29,7 +29,7 @@ const EduventuresCourses = () => {
       </h2>
 
       {/* Cards with Flexbox */}
-      <div className="eduventuresCourses-cards flex flex-wrap justify-center">
+      <div className="eduventuresCourses-cards flex flex-wrap justify-center gap-4 mt-4">
         {courses.map((course,index) => (
           <div key={index} className="eduventuresCourses-cardWrapper">
             <div className="eduventuresCourses-card bg-blue-100 rounded-2xl shadow-md hover:shadow-xl transition flex flex-col">

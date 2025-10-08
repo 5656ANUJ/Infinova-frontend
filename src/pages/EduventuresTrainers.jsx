@@ -26,8 +26,8 @@ const EduventuresTrainers = () => {
   return (
     <div className="eduventuresTrainers-container bg-white">
       {/* Heading */}
-      <h2 className="eduventuresTrainers-heading text-4xl font-bold text-center">
-        Meet Our <span className="text-blue-600 text-5xl">Trainers</span>
+      <h2 className="eduventuresTrainers-heading text-6xl font-bold text-center">
+        Meet Our <span className="text-blue-600 ">Trainers</span>
       </h2>
 
       {/* Trainers flex cards */}

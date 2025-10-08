@@ -1,5 +1,5 @@
 @import "tailwindcss";
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -8,6 +8,9 @@ html,
 body {
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 ion-icon {
   color: white;
@@ -1125,7 +1128,7 @@ ion-icon {
   font-weight: 600;
 }
 
-.highlight {
+.highlights {
   color: #2563eb;
 }
 
@@ -1328,7 +1331,7 @@ ion-icon {
 /* eduventures Contact page */
 /* Outer container */
 .EduventuresUniversitiesContact {
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 0rem 1rem;
 }
 
 /* Stats Section */
@@ -1452,7 +1455,7 @@ ion-icon {
 /* eduventures courses */
 /* Container spacing */
 .eduventuresCourses-container {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem 0rem 2rem ;
   margin-top: 2rem;
 }
 
@@ -1464,7 +1467,7 @@ ion-icon {
 /* Cards container spacing */
 .eduventuresCourses-cards {
   margin-bottom: 2rem;
-  gap: 6rem; /* spacing between cards */
+  gap: 2rem; /* spacing between cards */
 }
 
 /* Wrapper around card */
@@ -1561,18 +1564,19 @@ ion-icon {
 /* Eduventures Trainers */
 /* Container spacing */
 .eduventuresTrainers-container {
-  padding: 3rem 2rem;
+  padding: 1rem 2rem ;
   margin-top: 2rem;
 }
 
 /* Heading spacing */
 .eduventuresTrainers-heading {
   margin-bottom: 2.5rem;
+  font-size: 2rem;
 }
 
 /* Cards container */
 .eduventuresTrainers-cards {
-  gap: 5rem;
+  gap: 2rem;
 }
 
 /* Individual card */
@@ -1617,7 +1621,7 @@ ion-icon {
   text-align: center;
   margin: 50px auto;
   max-width: 1000px;
-  padding: 0 15px;
+  padding: 0px 5px;
 }
 
 /* Marquee Effect */
@@ -1625,10 +1629,11 @@ ion-icon {
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 30px;
+  width: 100%;
 }
 .marquee {
   display: inline-block;
-  animation: marquee 12s linear infinite;
+  animation: scroll 18s linear infinite;
 }
 .marquee img {
   height: 40px;
@@ -1647,11 +1652,13 @@ ion-icon {
 /* Title */
 .eduventures-testimonials-title {
   font-weight: bold;
-  margin-bottom: 40px;
+  margin: 40px 0px 20px 0px;
   font-size: 2rem;
+
 }
-.highlight {
+.testinomial-highlights {
   color: #2563eb; /* Tailwind blue-600 */
+
 }
 
 /* Testimonial Card */
@@ -2237,7 +2244,7 @@ ion-icon {
 .master-classes-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 20px 0px 20px; ;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -2254,7 +2261,7 @@ ion-icon {
 }
 
 .highlight {
-  background: #0056d2;
+  background: #2563eb;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2529,7 +2536,7 @@ ion-icon {
 
 .nav-highlight {
   font-size: 18px;
-  color: #3b82f6;
+  color: #2563eb;
   font-weight: 600;
 }
 
@@ -2900,13 +2907,6 @@ ion-icon {
   margin-bottom: 20px;
 }
 
-.highlight {
-  background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 50%, #2c5282 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-}
 
 .description {
   font-size: clamp(16px, 2vw, 20px);
@@ -3255,13 +3255,6 @@ ion-icon {
   height: 20px;
 }
 
-.highlight {
-  background: linear-gradient(135deg, #3182CE 0%, #2B6CB0 50%, #2C5282 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-}
 
 .description {
   font-size: clamp(16px, 2vw, 20px);

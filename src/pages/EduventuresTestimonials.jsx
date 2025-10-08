@@ -35,20 +35,41 @@ export default function EduventuresTestimonials() {
 
   return (
     <div className="eduventures-testimonials-container">
+      
       {/* Logos Section */}
       <div className="marquee-container">
         <div className="marquee">
-          <img src="/google.png" alt="Google" className="logo" />
-          <img src="/ebay.png" alt="eBay" className="logo" />
-          <img src="/paytm.png" alt="Paytm" className="logo" />
-          <img src="/amazon.png" alt="Amazon" className="logo" />
-          <img src="/unilever.png" alt="Unilever" className="logo" />
+          <img src="/src/logosColleges/Deogiri.jpg" alt="google" className="logo" />
+          <img src="/src/LogosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
+          <img src="/src/LogosColleges/GPN.jpg" alt="Paytm" className="logo" />
+          <img src="/src/LogosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
+          <img src="/src/LogosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
+          <img src="/src/LogosColleges/MGM.png" alt="Google" className="logo" />
+          <img src="/src/LogosColleges/MIT.png" alt="eBay" className="logo" />
+          <img src="/src/LogosColleges/PRAVaRA.png" alt="Paytm" className="logo" />
+          <img src="/src/LogosColleges/RIT.jpg" alt="Amazon" className="logo" />
+          <img src="/src/LogosColleges/St_John_College.png" alt="Unilever" className="logo" />
+          <img src="/src/LogosColleges/WIT.webp" alt="Google" className="logo" />
+          <img src="/src/LogosColleges/YB_Chavan.png" alt="eBay" className="logo" />
+
+          <img src="/src/logosColleges/Deogiri.jpg" alt="google" className="logo" />
+          <img src="/src/LogosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
+          <img src="/src/LogosColleges/GPN.jpg" alt="Paytm" className="logo" />
+          <img src="/src/LogosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
+          <img src="/src/LogosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
+          <img src="/src/LogosColleges/MGM.png" alt="Google" className="logo" />
+          <img src="/src/LogosColleges/MIT.png" alt="eBay" className="logo" />
+          <img src="/src/LogosColleges/PRAVaRA.png" alt="Paytm" className="logo" />
+          <img src="/src/LogosColleges/RIT.jpg" alt="Amazon" className="logo" />
+          <img src="/src/LogosColleges/St_John_College.png" alt="Unilever" className="logo" />
+          <img src="/src/LogosColleges/WIT.webp" alt="Google" className="logo" />
+          <img src="/src/LogosColleges/YB_Chavan.png" alt="eBay" className="logo" />
         </div>
       </div>
 
       {/* Title */}
-      <h1 className="eduventures-testimonials-title text-5xl">
-        Your <span className="highlight">Goal</span> Our <span className="highlight">Mission</span>
+      <h1 className="eduventures-testimonials-title text-6xl">
+        Your <span className="testinomial-highlights">Goal</span> Our <span className="testinomial-highlights">Mission</span>
       </h1>
 
       {/* Testimonial Card */}

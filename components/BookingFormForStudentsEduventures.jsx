@@ -41,11 +41,11 @@ export default function BookingForm() {
               required
             >
               <option value="">Select the Program</option>
-              <option value="web-development">Web Development</option>
-              <option value="data-science">Data Science</option>
-              <option value="ui-ux-design">UI/UX Design</option>
-              <option value="digital-marketing">Digital Marketing</option>
-              <option value="mobile-development">Mobile Development</option>
+              <option value="web-development">Clinical Research</option>
+              <option value="data-science">Clinical coding</option>
+              <option value="ui-ux-design">Cyber security</option>
+              {/* <option value="digital-marketing">Digital Marketing</option> */}
+              {/* <option value="mobile-development">Mobile Development</option> */}
             </select>
           </div>
 
@@ -83,7 +83,7 @@ export default function BookingForm() {
               placeholder="Phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="form-input phone-input"
+              className="form-input "
               required
             />
           </div>

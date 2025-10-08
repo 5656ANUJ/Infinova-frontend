@@ -14,7 +14,7 @@ const MasterClasses = () => {
     <div className="master-classes-container font family-montserrat">
       <div className="header">
         <h1 className="title">
-          Free <span className="highlight">Master Classes</span>
+          Free <span className="highlights">Master Classes</span>
         </h1>
       </div>
       

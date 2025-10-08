@@ -10,7 +10,7 @@ const DivisionsPage = () => {
       {/* Heading */}
       <div className="division-header">
         <h1 className="division-header-title">Our</h1>
-        <h1 className="division-header-title division-header-blue">Division</h1>
+        <h1 className="division-header-title "style={{color: "#2563eb"}}>Division</h1>
       </div>
 
       <div className="cards">

@@ -17,32 +17,52 @@ const Clients = () => {
   <div class="logo-slider">
     <div class="logo-track">
       {/* <!-- Logos (Set 1) --> */}
-      <div className='logo'><img src="/google.png"  alt="Logo 1" /></div>
-      <div className='logo'><img src="/ebay.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/paytm.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/amazon.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/unilever.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
 
       {/* <!-- Logos (Set 2 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/google.png"  alt="Logo 1" /></div>
-      <div className='logo'><img src="/ebay.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/paytm.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/amazon.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/unilever.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
 
       {/* <!-- Logos (Set 3 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/google.png"  alt="Logo 1" /></div>
-      <div className='logo'><img src="/ebay.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/paytm.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/amazon.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/unilever.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
 
        {/* <!-- Logos (Set 4 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/google.png"  alt="Logo 1" /></div>
-      <div className='logo'><img src="/ebay.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/paytm.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/amazon.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/unilever.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
     </div>
   </div>
 
@@ -50,7 +70,7 @@ const Clients = () => {
       {/* Why Choose Us Heading */}
       <div className="choose-heading">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
-          Why <span className="text-blue-500">Choose</span> Us ?
+          Why <span className="text-[#2563eb]">Choose</span> Us ?
         </h2>
       </div>
       {/* Stats Cards */}

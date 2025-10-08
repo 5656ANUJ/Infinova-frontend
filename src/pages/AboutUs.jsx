@@ -18,7 +18,7 @@ const AboutUs = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               About
             </h1>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1289E4]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2563eb]">
               Us
             </h1>
           </div>
