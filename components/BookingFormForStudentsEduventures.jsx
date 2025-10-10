@@ -1,27 +1,58 @@
-import { useState } from 'react';
-import '../global.css';
+import { useState } from "react";
+import "../global.css";
 
 export default function BookingForm() {
   const [formData, setFormData] = useState({
-    program: '',
-    fullName: '',
-    email: '',
-    phone: ''
+    program: "",
+    fullName: "",
+    email: "",
+    phone: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Form submitted! Check console for data.');
+    setIsSubmitting(true);
+
+    try {
+      const scriptURL =
+        ""; // Script URL removed for privacy
+
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          sheetName: "Students Booking Form", // 👈 Change this per form
+        }),
+      });
+
+      alert("✅ Booking submitted successfully!");
+
+      setFormData({
+        program: "",
+        fullName: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ Error submitting the booking form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -30,7 +61,7 @@ export default function BookingForm() {
         <h1 className="booking-title">
           Book <span className="text-blue">Free</span> LIVE Class Today !
         </h1>
-        
+
         <div className="form-container font-family:montserrat">
           <div className="input-group">
             <select
@@ -41,11 +72,9 @@ export default function BookingForm() {
               required
             >
               <option value="">Select the Program</option>
-              <option value="web-development">Clinical Research</option>
-              <option value="data-science">Clinical coding</option>
-              <option value="ui-ux-design">Cyber security</option>
-              {/* <option value="digital-marketing">Digital Marketing</option> */}
-              {/* <option value="mobile-development">Mobile Development</option> */}
+              <option value="Clinical Research">Clinical Research</option>
+              <option value="Clinical Coding">Clinical Coding</option>
+              <option value="Cyber Security">Cyber security</option>
             </select>
           </div>
 
@@ -74,16 +103,14 @@ export default function BookingForm() {
           </div>
 
           <div className="phone-group">
-            <div className="country-code">
-              +91
-            </div>
+            <div className="country-code">+91</div>
             <input
               type="tel"
               name="phone"
               placeholder="Phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="form-input "
+              className="form-input"
               required
             />
           </div>
@@ -91,17 +118,29 @@ export default function BookingForm() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="submit-button"
+            disabled={isSubmitting}
+            className={`submit-button ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            <span>Book Free LIVE Class Now!</span>
-            <svg 
-              className="arrow-icon" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span>
+              {isSubmitting ? "Submitting..." : "Book Free LIVE Class Now!"}
+            </span>
+            {!isSubmitting && (
+              <svg
+                className="arrow-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            )}
           </button>
         </div>
       </div>
