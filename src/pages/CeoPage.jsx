@@ -14,7 +14,7 @@ const CeoPage = () => {
         </div>
 
         {/* CEO Content */}
-        <div className="ceo-content w-full md:w-1/2 flex flex-col items-center text-center">
+        <div className="ceo-content w-full md:w-1/2 flex flex-col items-center text-center ">
           <div className="ceo-heading flex gap-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               About

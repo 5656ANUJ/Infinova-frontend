@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
@@ -16,6 +17,8 @@ import CourseForm from "./pages/CourseForm";
 
 function App() {
   return (
+     <>
+      <ScrollToTop />
     <Routes>
       {/* Pages that use global Navbar + Footer */}
       <Route element={<Layout />}>
@@ -37,6 +40,7 @@ function App() {
       <Route path="/consultants" element={<Consultants />} />
       <Route path="/technology" element={<Technology />} />
     </Routes>
+    </>
   );
 }
 

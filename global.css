@@ -6,11 +6,11 @@
 }
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 ion-icon {
   color: white;
@@ -54,6 +54,7 @@ ion-icon {
   background-color: #eaecfb;
   padding: 1rem 0.5rem; /* Top/bottom + Left/right padding */
   width: 75%;
+  height: auto;
   position: relative;
   left: 200px;
   border-radius: 20px;
@@ -96,6 +97,7 @@ ion-icon {
     /* prefer word spacing for justification */
     hyphens: auto;
 }
+
 
 /* clients page */
 /* ===== Clients Section ===== */
@@ -782,6 +784,9 @@ ion-icon {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
     height: 60px !important;
   }
+  .navbarImage {
+    display: none !important; /* Hide logo on mobile */
+  }
 
   .hamburgerIcon {
     margin-left: 14px;
@@ -1397,7 +1402,7 @@ ion-icon {
 
 .EduventuresUniversitiesContactPhone input:first-child {
   flex: 0 0 70px; /* fixed width for +91 field */
-  text-align: center;
+  /* text-align: center; */
 }
 
 .EduventuresUniversitiesContactPhone input:last-child {
