@@ -2,148 +2,196 @@ import { useState } from "react";
 import "../global.css";
 
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
-    program: "",
-    fullName: "",
-    email: "",
-    phone: "",
-  });
+  const [formData, setFormData] = useState({
+    program: "",
+    fullName: "",
+    email: "",
+    phone: "",
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: null,
+      }));
+    }
+  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const validateForm = () => {
+    const newErrors = {};
 
-    try {
-      const scriptURL =
-        ""; // Script URL removed for privacy
+    if (!formData.program) {
+      newErrors.program = "Please select a program.";
+    }
+  
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required.";
+    } else if (formData.fullName.trim().split(/\s+/).length < 2) {
+      newErrors.fullName = "Please enter both first and last name.";
+    }
+    if (!formData.email) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email address is invalid.";
+    }
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
 
-      await fetch(scriptURL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          sheetName: "Students Booking Form", // 👈 Change this per form
-        }),
-      });
+    return newErrors;
+  };
 
-      alert("✅ Booking submitted successfully!");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
-      setFormData({
-        program: "",
-        fullName: "",
-        email: "",
-        phone: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("❌ Error submitting the booking form. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    setIsSubmitting(true);
+    setErrors({});
 
-  return (
-    <div className="booking-container">
-      <div className="booking-card EduventuresUniversitiesContactBox bg-blue-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between w-full max-w-5xl">
-        <h1 className="booking-title">
-          Book <span className="text-blue">Free</span> LIVE Class Today !
-        </h1>
+    try {
+      const scriptURL = ""; // Script URL removed for privacy
 
-        <div className="form-container font-family:montserrat">
-          <div className="input-group">
-            <select
-              name="program"
-              value={formData.program}
-              onChange={handleInputChange}
-              className="form-input"
-              required
-            >
-              <option value="">Select the Program</option>
-              <option value="Clinical Research">Clinical Research</option>
-              <option value="Clinical Coding">Clinical Coding</option>
-              <option value="Cyber Security">Cyber security</option>
-            </select>
-          </div>
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          sheetName: "Students Booking Form",
+        }),
+      });
 
-          <div className="input-group">
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Full Name"
-              value={formData.fullName}
-              onChange={handleInputChange}
-              className="form-input"
-              required
-            />
-          </div>
+      alert("✅ Booking submitted successfully!");
 
-          <div className="input-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="form-input"
-              required
-            />
-          </div>
+      setFormData({ program: "", fullName: "", email: "", phone: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ Error submitting the booking form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-          <div className="phone-group">
-            <div className="country-code">+91</div>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              className="form-input"
-              required
-            />
-          </div>
+  // 1. Define the inline style object for errors
+  const errorStyle = {
+    color: 'red',
+    fontSize: '0.875rem',
+    marginTop: '0.25rem',
+    textAlign: 'left',
+    paddingLeft: '1rem',
+  };
 
-          <button
-            type="button"
-            onClick={handleSubmit}
-            disabled={isSubmitting}
-            className={`submit-button ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          >
-            <span>
-              {isSubmitting ? "Submitting..." : "Book Free LIVE Class Now!"}
-            </span>
-            {!isSubmitting && (
-              <svg
-                className="arrow-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  return (
+    <div className="booking-container">
+      <div className="booking-card EduventuresUniversitiesContactBox bg-blue-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between w-full max-w-5xl">
+        <h1 className="booking-title">
+          Book <span className="text-blue">Free</span> LIVE Class Today !
+        </h1>
+
+        <div className="form-container font-family:montserrat">
+          <form onSubmit={handleSubmit} noValidate  className="flex flex-col gap-4" >
+            <div className="input-group">
+              <select
+                name="program"
+                value={formData.program}
+            onChange={handleInputChange}
+                className="form-input"
+                required
+              >
+                <option value="">Select the Program</option>
+                <option value="Clinical Research">Clinical Research</option>
+                <option value="Clinical Coding">Clinical Coding</option>
+                <option value="Cyber Security">Cyber security</option>
+              </select>
+              {/* 2. Apply the inline style */}
+              {errors.program && <p style={errorStyle}>{errors.program}</p>}
+            </div>
+
+            <div className="input-group">
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                className="form-input"
+                required
+              />
+              {errors.fullName && <p style={errorStyle}>{errors.fullName}</p>}
+            </div>
+
+            <div className="input-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="form-input"
+                required
+              />
+              {errors.email && <p style={errorStyle}>{errors.email}</p>}
+            </div>
+
+            <div className="phone-group">
+              <div className="country-code">+91</div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="form-input"
+                required
+              />
+            </div>
+            {errors.phone && <p style={errorStyle}>{errors.phone}</p>}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`submit-button ${
+                isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              <span>
+                {isSubmitting ? "Submitting..." : "Book Free LIVE Class Now!"}
+              </span>
+              {!isSubmitting && (
+                <svg
+                  className="arrow-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              )}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
