@@ -12,6 +12,16 @@ const CourseForm = () => {
     email: '',
     phone: ''
   });
+  const [errors, setErrors] = useState({
+    fullName: '',
+    email: '',
+    phone: ''
+  });
+  const [touched, setTouched] = useState({
+    fullName: false,
+    email: false,
+    phone: false
+  });
   const [otpValues, setOtpValues] = useState(['', '', '', '']);
   const [showOTPSection, setShowOTPSection] = useState(false);
   const [message, setMessage] = useState('');
@@ -47,12 +57,138 @@ const CourseForm = () => {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
 
+  // Validation functions
+  const validateFullName = (name) => {
+    if (!name.trim()) {
+      return 'Full name is required';
+    }
+    if (name.trim().length < 2) {
+      return 'Name must be at least 2 characters';
+    }
+    if (name.trim().length > 50) {
+      return 'Name must not exceed 50 characters';
+    }
+    if (!/^[a-zA-Z\s.'-]+$/.test(name)) {
+      return 'Name can only contain letters, spaces, and basic punctuation';
+    }
+    return '';
+  };
+
+  const validateEmail = (email) => {
+    if (!email.trim()) {
+      return 'Email is required';
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return 'Please enter a valid email address';
+    }
+    if (email.length > 100) {
+      return 'Email must not exceed 100 characters';
+    }
+    return '';
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone.trim()) {
+      return 'Phone number is required';
+    }
+    if (!/^\d+$/.test(phone)) {
+      return 'Phone number must contain only digits';
+    }
+    if (phone.length !== 10) {
+      return 'Phone number must be exactly 10 digits';
+    }
+    if (phone[0] === '0' || phone[0] === '1' || phone[0] === '2' || phone[0] === '3' || phone[0] === '4' || phone[0] === '5') {
+      return 'Phone number must start with 6, 7, 8, or 9';
+    }
+    return '';
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    
+    // For phone, only allow digits and limit to 10 characters
+    if (name === 'phone') {
+      const digitOnly = value.replace(/\D/g, '');
+      if (digitOnly.length <= 10) {
+        setFormData(prev => ({
+          ...prev,
+          [name]: digitOnly
+        }));
+        
+        // Validate on change if already touched
+        if (touched[name]) {
+          setErrors(prev => ({
+            ...prev,
+            [name]: validatePhone(digitOnly)
+          }));
+        }
+      }
+      return;
+    }
+    
+    // For other fields
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
+    // Validate on change if already touched
+    if (touched[name]) {
+      let error = '';
+      if (name === 'fullName') {
+        error = validateFullName(value);
+      } else if (name === 'email') {
+        error = validateEmail(value);
+      }
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched(prev => ({
+      ...prev,
+      [name]: true
+    }));
+
+    // Validate on blur
+    let error = '';
+    if (name === 'fullName') {
+      error = validateFullName(formData[name]);
+    } else if (name === 'email') {
+      error = validateEmail(formData[name]);
+    } else if (name === 'phone') {
+      error = validatePhone(formData[name]);
+    }
+
+    setErrors(prev => ({
+      ...prev,
+      [name]: error
+    }));
+  };
+
+  const validateForm = () => {
+    const fullNameError = validateFullName(formData.fullName);
+    const emailError = validateEmail(formData.email);
+    const phoneError = validatePhone(formData.phone);
+
+    setErrors({
+      fullName: fullNameError,
+      email: emailError,
+      phone: phoneError
+    });
+
+    setTouched({
+      fullName: true,
+      email: true,
+      phone: true
+    });
+
+    return !fullNameError && !emailError && !phoneError;
   };
 
   const resetForm = () => {
@@ -60,6 +196,16 @@ const CourseForm = () => {
       fullName: '',
       email: '',
       phone: ''
+    });
+    setErrors({
+      fullName: '',
+      email: '',
+      phone: ''
+    });
+    setTouched({
+      fullName: false,
+      email: false,
+      phone: false
     });
     setOtpValues(['', '', '', '']);
     setShowOTPSection(false);
@@ -71,23 +217,8 @@ const CourseForm = () => {
   };
 
   const sendOTP = async () => {
-    const { fullName, email, phone } = formData;
-    
-    if (!fullName || !email || !phone) {
-      setMessage('Please fill all required fields');
-      setTimeout(() => setMessage(''), 3000);
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setMessage('Please enter a valid email address');
-      setTimeout(() => setMessage(''), 3000);
-      return;
-    }
-
-    if (phone.length < 10) {
-      setMessage('Please enter a valid phone number');
+    if (!validateForm()) {
+      setMessage('Please fix all errors before proceeding');
       setTimeout(() => setMessage(''), 3000);
       return;
     }
@@ -101,9 +232,9 @@ const CourseForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: fullName,
-          email: email,
-          phone: phone,
+          name: formData.fullName.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone,
           age: '25'
         }),
       });
@@ -202,8 +333,8 @@ const CourseForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.fullName,
-          email: formData.email,
+          name: formData.fullName.trim(),
+          email: formData.email.trim(),
           phone: formData.phone,
           course: courseData.name
         }),
@@ -250,6 +381,12 @@ const CourseForm = () => {
       return;
     }
 
+    if (!/^\d{4}$/.test(enteredOTP)) {
+      setMessage('OTP must contain only digits');
+      setTimeout(() => setMessage(''), 3000);
+      return;
+    }
+
     try {
       setIsDownloading(true);
       const response = await fetch(import.meta.env.VITE_BACKEND_VERIFY_OTP, {
@@ -258,8 +395,8 @@ const CourseForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: formData.email,
-          name: formData.fullName,
+          email: formData.email.trim(),
+          name: formData.fullName.trim(),
           number: formData.phone,
           age: '25',
           enteredOtp: enteredOTP
@@ -303,8 +440,8 @@ const CourseForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.fullName,
-          email: formData.email,
+          name: formData.fullName.trim(),
+          email: formData.email.trim(),
           phone: formData.phone,
           age: '25'
         }),
@@ -381,37 +518,58 @@ const CourseForm = () => {
           
           {!showOTPSection ? (
             <div className="form-inputs">
-              <input 
-                type="text" 
-                name="fullName"
-                placeholder="Full Name" 
-                className="form-input"
-                value={formData.fullName}
-                onChange={handleInputChange}
-                required
-              />
-              <input 
-                type="email" 
-                name="email"
-                placeholder="Email" 
-                className="form-input"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-              <div className="phone-input-container">
-                <span className="phone-country-code">+91</span>
+              <div className="input-group">
                 <input 
-                  type="tel" 
-                  name="phone"
-                  placeholder="Phone" 
-                  className="phone-input"
-                  value={formData.phone}
+                  type="text" 
+                  name="fullName"
+                  placeholder="Full Name" 
+                  className={`form-input ${errors.fullName && touched.fullName ? 'input-error' : ''}`}
+                  value={formData.fullName}
                   onChange={handleInputChange}
-                  maxLength="10"
+                  onBlur={handleBlur}
                   required
                 />
+                {errors.fullName && touched.fullName && (
+                  <span className="error-message">{errors.fullName}</span>
+                )}
               </div>
+
+              <div className="input-group">
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Email" 
+                  className={`form-input ${errors.email && touched.email ? 'input-error' : ''}`}
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  onBlur={handleBlur}
+                  required
+                />
+                {errors.email && touched.email && (
+                  <span className="error-message">{errors.email}</span>
+                )}
+              </div>
+
+              <div className="input-group">
+                <div className="phone-input-container">
+                  <span className="phone-country-code">+91</span>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    placeholder="Phone" 
+                    className={`phone-input ${errors.phone && touched.phone ? 'input-error' : ''}`}
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    onBlur={handleBlur}
+                    maxLength="10"
+                    required
+                  />
+                </div>
+                {errors.phone && touched.phone && (
+                  <span className="error-message">{errors.phone}</span>
+                )}
+              </div>
+
               <button 
                 type="button"
                 onClick={sendOTP} 
