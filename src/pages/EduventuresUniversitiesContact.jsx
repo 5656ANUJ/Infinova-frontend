@@ -201,7 +201,7 @@ export default function EduventuresUniversitiesContact() {
     setIsSubmitting(true);
 
     try {
-      const scriptURL = ""; // same as booking form
+      const scriptURL = import.meta.env.VITE_GOOGLE_SHEET_APP_URL; // same as booking form
 
       await fetch(scriptURL, {
         method: "POST",

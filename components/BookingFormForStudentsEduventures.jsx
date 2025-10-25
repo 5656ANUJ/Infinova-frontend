@@ -65,7 +65,7 @@ export default function BookingForm() {
     setErrors({});
 
     try {
-      const scriptURL = ""; // Script URL removed for privacy
+      const scriptURL = import.meta.env.VITE_GOOGLE_SHEET_APP_URL; // Script URL removed for privacy
 
       await fetch(scriptURL, {
         method: "POST",
