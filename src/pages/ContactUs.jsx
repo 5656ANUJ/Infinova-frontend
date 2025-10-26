@@ -177,7 +177,7 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      const scriptURL = ""; // same as other forms
+      const scriptURL = import.meta.env.VITE_GOOGLE_SHEET_APP_URL; // same as other forms
 
       await fetch(scriptURL, {
         method: "POST",
