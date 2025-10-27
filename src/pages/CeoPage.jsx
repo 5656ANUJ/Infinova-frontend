@@ -24,7 +24,14 @@ const CeoPage = () => {
             </h1>
           </div>
           <p className="ceo-text text-[#053C66] text-base sm:text-lg md:text-xl font-medium leading-relaxed">
-           The CEO is a visionary leader with over 7 years of experience in corporate training, student development, and career readiness. With a background in mechanical engineering and a strong record in skill development, the CEO has impacted 20,000+ individuals across 50+ colleges and institutes. Over the years, they have collaborated as a freelance trainer with globally respected organizations such as Microsoft, Bajaj, TVS, TeamLease, Barclays, Skoda, Endurance, Greenpack, Atos, and Accenture—demonstrating adaptability across industries and the ability to deliver measurable results. Coming from a military background and having appeared multiple times for AFSB and SSB, the CEO embodies discipline, resilience, and leadership under pressure—qualities that define every training program and professional engagement.
+            The CEO is a visionary leader with 7+ years of experience in
+            corporate training, student development, and career readiness. A
+            mechanical engineer by background, they’ve impacted 20,000+
+            individuals across 50+ institutions and collaborated with global
+            brands like Microsoft, Bajaj, TVS, Barclays, and Accenture. With a
+            military background and experience in AFSB and SSB, the CEO
+            exemplifies discipline, resilience, and leadership—qualities
+            reflected in every program and partnership.
           </p>
         </div>
       </div>

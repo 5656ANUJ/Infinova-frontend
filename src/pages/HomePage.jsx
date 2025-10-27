@@ -2,6 +2,7 @@ import React from 'react';
 import DivisionsPage from './DivisionsPage';
 import AboutUs from './AboutUs';
 import CeoPage from './CeoPage';
+import AboutCEO from './AboutCEO';
 import Clients from './Clients';
 
 const HomePage = () => {
