@@ -14,55 +14,55 @@ const Clients = () => {
 
       {/* Marquee Section */}
 
-  <div class="logo-slider">
-    <div class="logo-track">
+  <div className="logo-slider">
+    <div className="logo-track">
       {/* <!-- Logos (Set 1) --> */}
-      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/logosCompanies/accenture.png" alt="accenture" /></div>
+      <div className='logo'><img src="/logosCompanies/Atos.webp" alt="Atos" /></div>
+      <div className='logo'><img src="/logosCompanies/bajafin.png" alt="bajafin" /></div>
+      <div className='logo'><img src="/logosCompanies/barklays.png" alt="barklays" /></div>
+      <div className='logo'><img src="/logosCompanies/Endurance.png" alt="Endurance" /></div>
+      <div className='logo'><img src="/logosCompanies/greenpack.png" alt="greenpack" /></div>
+      <div className='logo'><img src="/logosCompanies/Microsoft.png" alt="Microsoft" /></div>
+      <div className='logo'><img src="/logosCompanies/skoda.png" alt="skoda" /></div>
+      <div className='logo'><img src="/logosCompanies/tvs.png" alt="tvs" /></div>
+      <div className='logo'><img src="/logosCompanies/teamlease-services.png" alt="teamlease-services" /></div>
 
       {/* <!-- Logos (Set 2 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/logosCompanies/accenture.png" alt="accenture" /></div>
+      <div className='logo'><img src="/logosCompanies/Atos.webp" alt="Atos" /></div>
+      <div className='logo'><img src="/logosCompanies/bajafin.png" alt="bajafin" /></div>
+      <div className='logo'><img src="/logosCompanies/barklays.png" alt="barklays" /></div>
+      <div className='logo'><img src="/logosCompanies/Endurance.png" alt="Endurance" /></div>
+      <div className='logo'><img src="/logosCompanies/greenpack.png" alt="greenpack" /></div>
+      <div className='logo'><img src="/logosCompanies/Microsoft.png" alt="Microsoft" /></div>
+      <div className='logo'><img src="/logosCompanies/skoda.png" alt="skoda" /></div>
+      <div className='logo'><img src="/logosCompanies/tvs.png" alt="tvs" /></div>
+      <div className='logo'><img src="/logosCompanies/teamlease-services.png" alt="teamlease-services" /></div>
 
       {/* <!-- Logos (Set 3 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/logosCompanies/accenture.png" alt="accenture" /></div>
+      <div className='logo'><img src="/logosCompanies/Atos.webp" alt="Atos" /></div>
+      <div className='logo'><img src="/logosCompanies/bajafin.png" alt="bajafin" /></div>
+      <div className='logo'><img src="/logosCompanies/barklays.png" alt="barklays" /></div>
+      <div className='logo'><img src="/logosCompanies/Endurance.png" alt="Endurance" /></div>
+      <div className='logo'><img src="/logosCompanies/greenpack.png" alt="greenpack" /></div>
+      <div className='logo'><img src="/logosCompanies/Microsoft.png" alt="Microsoft" /></div>
+      <div className='logo'><img src="/logosCompanies/skoda.png" alt="skoda" /></div>
+      <div className='logo'><img src="/logosCompanies/tvs.png" alt="tvs" /></div>
+      <div className='logo'><img src="/logosCompanies/teamlease-services.png" alt="teamlease-services" /></div>
 
        {/* <!-- Logos (Set 4 – Duplicate for infinite loop) --> */}
-      <div className='logo'><img src="/src/logosCompanies/accenture.png" alt="" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Atos.webp" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Bajafin.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/barklays.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Endurance.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/greenpack.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/Microsoft.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/skoda.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/tvs.png" alt="Logo 1" /></div>
-      <div className='logo'><img src="/src/logosCompanies/teamlease-services.png" alt="Logo 1" /></div>
+      <div className='logo'><img src="/logosCompanies/accenture.png" alt="accenture" /></div>
+      <div className='logo'><img src="/logosCompanies/Atos.webp" alt="Atos" /></div>
+      <div className='logo'><img src="/logosCompanies/bajafin.png" alt="bajafin" /></div>
+      <div className='logo'><img src="/logosCompanies/barklays.png" alt="barklays" /></div>
+      <div className='logo'><img src="/logosCompanies/Endurance.png" alt="Endurance" /></div>
+      <div className='logo'><img src="/logosCompanies/greenpack.png" alt="greenpack" /></div>
+      <div className='logo'><img src="/logosCompanies/Microsoft.png" alt="Microsoft" /></div>
+      <div className='logo'><img src="/logosCompanies/skoda.png" alt="skoda" /></div>
+      <div className='logo'><img src="/logosCompanies/tvs.png" alt="tvs" /></div>
+      <div className='logo'><img src="/logosCompanies/teamlease-services.png" alt="teamlease-services" /></div>
     </div>
   </div>
 

@@ -24,6 +24,11 @@ const testimonials = [
 
 export default function EduventuresTestimonials() {
   const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  // Minimum swipe distance (in px) to trigger slide change
+  const minSwipeDistance = 50;
 
   const prevSlide = () => {
     setCurrent(current === 0 ? testimonials.length - 1 : current - 1);
@@ -33,37 +38,61 @@ export default function EduventuresTestimonials() {
     setCurrent(current === testimonials.length - 1 ? 0 : current + 1);
   };
 
+  const handleTouchStart = (e) => {
+    setTouchEnd(0); // Reset touchEnd
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide(); // Swipe left = next slide
+    }
+    if (isRightSwipe) {
+      prevSlide(); // Swipe right = previous slide
+    }
+  };
+
   return (
     <div className="eduventures-testimonials-container">
       
       {/* Logos Section */}
       <div className="marquee-container">
         <div className="marquee">
-          <img src="/src/logosColleges/Deogiri.jpg" alt="google" className="logo" />
-          <img src="/src/LogosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
-          <img src="/src/LogosColleges/GPN.jpg" alt="Paytm" className="logo" />
-          <img src="/src/LogosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
-          <img src="/src/LogosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
-          <img src="/src/LogosColleges/MGM.png" alt="Google" className="logo" />
-          <img src="/src/LogosColleges/MIT.png" alt="eBay" className="logo" />
-          <img src="/src/LogosColleges/PRAVaRA.png" alt="Paytm" className="logo" />
-          <img src="/src/LogosColleges/RIT.jpg" alt="Amazon" className="logo" />
-          <img src="/src/LogosColleges/St_John_College.png" alt="Unilever" className="logo" />
-          <img src="/src/LogosColleges/WIT.webp" alt="Google" className="logo" />
-          <img src="/src/LogosColleges/YB_Chavan.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/Deogiri.jpg" alt="google" className="logo" />
+          <img src="/logosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/GPN.jpg" alt="Paytm" className="logo" />
+          <img src="/logosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
+          <img src="/logosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
+          <img src="/logosColleges/MGM.png" alt="Google" className="logo" />
+          <img src="/logosColleges/MIT.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/PRAVARA.png" alt="PRAVARA" className="logo" />
+          <img src="/logosColleges/RIT.jpg" alt="Amazon" className="logo" />
+          <img src="/logosColleges/St_John_College.png" alt="Unilever" className="logo" />
+          <img src="/logosColleges/WIT.webp" alt="Google" className="logo" />
+          <img src="/logosColleges/YB_Chavan.png" alt="eBay" className="logo" />
 
-          <img src="/src/logosColleges/Deogiri.jpg" alt="google" className="logo" />
-          <img src="/src/LogosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
-          <img src="/src/LogosColleges/GPN.jpg" alt="Paytm" className="logo" />
-          <img src="/src/LogosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
-          <img src="/src/LogosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
-          <img src="/src/LogosColleges/MGM.png" alt="Google" className="logo" />
-          <img src="/src/LogosColleges/MIT.png" alt="eBay" className="logo" />
-          <img src="/src/LogosColleges/PRAVaRA.png" alt="Paytm" className="logo" />
-          <img src="/src/LogosColleges/RIT.jpg" alt="Amazon" className="logo" />
-          <img src="/src/LogosColleges/St_John_College.png" alt="Unilever" className="logo" />
-          <img src="/src/LogosColleges/WIT.webp" alt="Google" className="logo" />
-          <img src="/src/LogosColleges/YB_Chavan.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/Deogiri.jpg" alt="google" className="logo" />
+          <img src="/logosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/GPN.jpg" alt="Paytm" className="logo" />
+          <img src="/logosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
+          <img src="/logosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
+          <img src="/logosColleges/MGM.png" alt="Google" className="logo" />
+          <img src="/logosColleges/MIT.png" alt="eBay" className="logo" />
+          <img src="/logosColleges/PRAVARA.png" alt="PRAVARA" className="logo" />
+          <img src="/logosColleges/RIT.jpg" alt="Amazon" className="logo" />
+          <img src="/logosColleges/St_John_College.png" alt="Unilever" className="logo" />
+          <img src="/logosColleges/WIT.webp" alt="Google" className="logo" />
+          <img src="/logosColleges/YB_Chavan.png" alt="eBay" className="logo" />
         </div>
       </div>
 
@@ -72,8 +101,13 @@ export default function EduventuresTestimonials() {
         Your <span className="testinomial-highlights">Goal</span> Our <span className="testinomial-highlights">Mission</span>
       </h1>
 
-      {/* Testimonial Card */}
-      <div className="testimonial-card">
+      {/* Testimonial Card with Swipe */}
+      <div 
+        className="testimonial-card"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <button onClick={prevSlide} className="arrow-btn left">
           <FaArrowLeft />
         </button>

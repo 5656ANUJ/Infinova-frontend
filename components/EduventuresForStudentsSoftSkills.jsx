@@ -3,7 +3,7 @@ import { Download } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const EduventuresCourses = () => {
+const EduventuresForStudentsSoftSkills = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -154,4 +154,4 @@ const EduventuresCourses = () => {
   );
 };
 
-export default EduventuresCourses;
+export default EduventuresForStudentsSoftSkills;
