@@ -223,10 +223,10 @@ const FooterAnuj = () => {
           <div className="footer-section">
             <h3 className="footer-links-title">Quick Links</h3>
             <ul className="footer-links">
-              <li><NavLink to="/courses" className="cursor-pointer hover:text-blue-600 transition-colors">Courses</NavLink></li>
+              {/* <li><NavLink to="/courses" className="cursor-pointer hover:text-blue-600 transition-colors">Courses</NavLink></li> */}
               <li><NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">Internships</NavLink></li>
               <li><NavLink to="/careers" className="cursor-pointer hover:text-blue-600 transition-colors">Career</NavLink></li>
-              <li><NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">Hiring Solutions</NavLink></li>
+              {/* <li><NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">Hiring Solutions</NavLink></li> */}
               <li><NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">Privacy Policy</NavLink></li>
               <li><NavLink to="/coming-soon" className="cursor-pointer hover:text-blue-600 transition-colors">Terms & Conditions</NavLink></li>
             </ul>
