@@ -29,7 +29,7 @@ const CeoPage = () => {
             mechanical engineer by background, they’ve impacted 20,000+
             individuals across 50+ institutions and collaborated with global
             brands like Microsoft, Bajaj, TVS, Barclays, and Accenture. With a
-            military background and experience in AFSB and SSB, the CEO
+            military background, the CEO
             exemplifies discipline, resilience, and leadership—qualities
             reflected in every program and partnership.
           </p>

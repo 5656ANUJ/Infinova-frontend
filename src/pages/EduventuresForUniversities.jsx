@@ -5,6 +5,7 @@ import EduventuresUniversitiesContact from './EduventuresUniversitiesContact'
 import EduventuresCourses from './EduventuresCourses'
 import EduventuresTrainers from './EduventuresTrainers'
 import EduventuresTestimonials from './EduventuresTestimonials'
+import Companies_marquee from '../components/Companies_marquee'
 
 const EduventuresForUniversities = () => {
   const contactFormRef = useRef(null); // Create ref for contact form
@@ -22,6 +23,7 @@ const EduventuresForUniversities = () => {
    <div className='w-[100vw] min-h-[100vh] '>
     <EduventuresForUniversitiesNavbar/>
     <EduventuresUnversitiessHero scrollToContactForm={scrollToContactForm} />
+    <Companies_marquee/>
     <EduventuresUniversitiesContact ref={contactFormRef} />
     <EduventuresCourses/>
     <EduventuresTrainers/>

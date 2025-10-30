@@ -1675,7 +1675,7 @@ ion-icon {
   animation: scroll 18s linear infinite;
 }
 .marquee img {
-  height: 40px;
+  height: 90px;
   margin: 0 20px;
   display: inline-block;
 }

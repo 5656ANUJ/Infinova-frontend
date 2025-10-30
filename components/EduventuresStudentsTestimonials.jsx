@@ -64,36 +64,7 @@ export default function EduventuresTestimonials() {
 
   return (
     <div className="eduventures-testimonials-container">
-      {/* Logos Section */}
-      <div className="marquee-container">
-        <div className="marquee">
-          <img src="/logosColleges/Deogiri.jpg" alt="google" className="logo" />
-          <img src="/logosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
-          <img src="/logosColleges/GPN.jpg" alt="Paytm" className="logo" />
-          <img src="/logosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
-          <img src="/logosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
-          <img src="/logosColleges/MGM.png" alt="Google" className="logo" />
-          <img src="/logosColleges/MIT.png" alt="eBay" className="logo" />
-          <img src="/logosColleges/PRAVARA.png" alt="Paytm" className="logo" />
-          <img src="/logosColleges/RIT.jpg" alt="Amazon" className="logo" />
-          <img src="/logosColleges/St_John_College.png" alt="Unilever" className="logo" />
-          <img src="/logosColleges/WIT.webp" alt="Google" className="logo" />
-          <img src="/logosColleges/YB_Chavan.png" alt="eBay" className="logo" />
-
-          <img src="/logosColleges/Deogiri.jpg" alt="google" className="logo" />
-          <img src="/logosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
-          <img src="/logosColleges/GPN.jpg" alt="Paytm" className="logo" />
-          <img src="/logosColleges/Gulabrao_College.jpg" alt="Amazon" className="logo" />
-          <img src="/logosColleges/HRPIPER.webp" alt="Unilever" className="logo" />
-          <img src="/logosColleges/MGM.png" alt="Google" className="logo" />
-          <img src="/logosColleges/MIT.png" alt="eBay" className="logo" />
-          <img src="/logosColleges/PRAVARA.png" alt="Paytm" className="logo" />
-          <img src="/logosColleges/RIT.jpg" alt="Amazon" className="logo" />
-          <img src="/logosColleges/St_John_College.png" alt="Unilever" className="logo" />
-          <img src="/logosColleges/WIT.webp" alt="Google" className="logo" />
-          <img src="/logosColleges/YB_Chavan.png" alt="eBay" className="logo" />
-        </div>
-      </div>
+     
 
       {/* Title */}
       <h1 className="eduventures-testimonials-title text-5xl">

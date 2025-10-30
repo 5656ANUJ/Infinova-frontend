@@ -24,7 +24,7 @@ const EduventuresNavbar = () => {
               : "eduventures-link"
           }
         >
-          For Universities
+          For Colleges
         </NavLink>
       </div>
     </nav>

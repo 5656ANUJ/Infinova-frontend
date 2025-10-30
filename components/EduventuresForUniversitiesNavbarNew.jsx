@@ -14,11 +14,11 @@ const EduventuresForUniversitiesNavbar = () => {
   
   const navigate = useNavigate();
 
-  const partners = [
-    { label: 'Partner 1', href: '#partner1' },
-    { label: 'Partner 2', href: '#partner2' },
-    { label: 'Partner 3', href: '#partner3' },
-  ];
+  // const partners = [
+  //   { label: 'Partner 1', href: '#partner1' },
+  //   { label: 'Partner 2', href: '#partner2' },
+  //   { label: 'Partner 3', href: '#partner3' },
+  // ];
 
   // Fetch courses on component mount
   useEffect(() => {
@@ -127,9 +127,9 @@ const EduventuresForUniversitiesNavbar = () => {
               onMouseEnter={() => setIsPartnersOpen(true)}
               onMouseLeave={() => setIsPartnersOpen(false)}
             >
-              <button className="font-medium text-gray-800 hover:text-blue-600 focus:outline-none px-3 py-2 rounded-md hover:bg-gray-100">
+              {/* <button className="font-medium text-gray-800 hover:text-blue-600 focus:outline-none px-3 py-2 rounded-md hover:bg-gray-100">
                 Our Partners ▾ 
-              </button>
+              </button> */}
               <AnimatePresence>
                 {isPartnersOpen && (
                   <motion.div
@@ -238,13 +238,13 @@ const EduventuresForUniversitiesNavbar = () => {
               </AnimatePresence>
 
               {/* Partners Mobile */}
-              <button
+              {/* <button
                 onClick={() => setIsPartnersOpen(!isPartnersOpen)}
                 className="w-full text-left font-medium text-gray-800 hover:text-blue-600 pr-3 py-2 rounded-md hover:bg-gray-100"
                 style={{ paddingLeft: '0.5rem' }}
               >
                 Our Partners ▾
-              </button>
+              </button> */}
               <AnimatePresence>
                 {isPartnersOpen && (
                   <motion.div
