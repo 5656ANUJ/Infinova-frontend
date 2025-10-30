@@ -25,7 +25,7 @@ const EduventuresCourses = () => {
     <div className="eduventuresCourses-container bg-white">
       {/* Heading */}
       <h2 className="eduventuresCourses-heading text-4xl font-bold text-center">
-        <span className="text-blue-600">Technical</span> Courses
+        <span className="text-blue-600">Job Oriented</span> Courses
       </h2>
 
       {/* Cards with Flexbox */}

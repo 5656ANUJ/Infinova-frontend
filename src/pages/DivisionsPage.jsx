@@ -33,7 +33,7 @@ const DivisionsPage = () => {
               alt="Education"
               className="division-info-img"
             />
-            <h3 className="division-info-title">Education Empowers</h3>
+            <h3 className="division-info-title">Job Oriented Courses</h3>
             <p className="division-info-text">
               We prepare students and professionals with industry-relevant
               skills, bridging the gap between learning and real-world
@@ -42,6 +42,9 @@ const DivisionsPage = () => {
             <span
               className="link cursor-pointer"
               onClick={() => navigate('/eduventures')}
+              style={{color: "#0056D2",
+                fontWeight: "700"
+              }}
             >
               Learn more →
             </span>
@@ -67,7 +70,7 @@ const DivisionsPage = () => {
               alt="Strategy"
               className="division-info-img"
             />
-            <h3 className="division-info-title">Strategy Guides</h3>
+            <h3 className="division-info-title">Corporate Training and Hiring</h3>
             <p className="division-info-text">
               We help individuals and organizations make informed choices,
               ensuring career and business growth with the right strategies.
@@ -75,6 +78,10 @@ const DivisionsPage = () => {
             <span
               className="link cursor-pointer"
               onClick={() => navigate('/coming-soon')}
+              style={{color: "#0056D2",
+                fontWeight: "700"
+              }}
+              
             >
               Learn more →
             </span>
@@ -100,7 +107,7 @@ const DivisionsPage = () => {
               alt="Innovation"
               className="division-info-img"
             />
-            <h3 className="division-info-title">Innovation Transforms</h3>
+            <h3 className="division-info-title">Technical Solutions</h3>
             <p className="division-info-text">
               Through cutting-edge technologies and creative solutions, we drive
               transformation that shapes industries and empowers the future.
@@ -108,6 +115,9 @@ const DivisionsPage = () => {
             <span
               className="link cursor-pointer"
               onClick={() => navigate('/coming-soon')}
+              style={{color: "#0056D2",
+                fontWeight: "700"
+              }}
             >
               Learn more →
             </span>

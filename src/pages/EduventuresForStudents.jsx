@@ -1,36 +1,40 @@
-import React, { useEffect } from 'react'
-// import EduventuresForStudentsNavbar from '../../components/EduventuresForStudentsNavbar'
+import React, { useEffect, useRef } from 'react'
 import Navbar from '../../components/EduventuresForStudentsNavbarNew'
-// import EduventuresForStudentsHeroSection from '../../components/EduventuresForStudentsHeroSection'
 import EduventuresForStudentsHeroSection from '../../components/EduventuresForStudentsHeroSectionNew'
 import BookingFormForStudentsEduventures from '../../components/BookingFormForStudentsEduventures'
 import EduventuresTrainers from '../../components/EduventuresForStudentsTrainers'
 import EduventuresStudentsTestimonials from '../../components/EduventuresStudentsTestimonials'
 import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
 import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresForStudentsMasterClassCard'
-
 import EduventuresCourses from './EduventuresCourses'
-
 import { useLocation } from 'react-router-dom';
 
-
 const EduventuresForStudents = () => {
-  const location = useLocation(); // 👈 required to track route changes
+  const location = useLocation();
+  const bookingFormRef = useRef(null); // Create ref for booking form
+
+  // Function to scroll to booking form
+  const scrollToBookingForm = () => {
+    bookingFormRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // 👈 scroll to top on route change
+    window.scrollTo(0, 0);
   }, [location.pathname]);
+
   return (
     <div>
       <Navbar/>
-      <EduventuresForStudentsHeroSection/>
-      <BookingFormForStudentsEduventures/>
+      <EduventuresForStudentsHeroSection scrollToBookingForm={scrollToBookingForm} />
+      <BookingFormForStudentsEduventures ref={bookingFormRef} />
       <EduventuresForStudentsMAsterClassCard/>
       <EduventuresCourses/>
       <EduventuresForStudentsSoftSkills/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
-      
     </div>
   )
 }

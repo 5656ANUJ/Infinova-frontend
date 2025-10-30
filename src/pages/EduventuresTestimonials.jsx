@@ -66,7 +66,7 @@ export default function EduventuresTestimonials() {
     <div className="eduventures-testimonials-container">
       
       {/* Logos Section */}
-      <div className="marquee-container">
+      {/* <div className="marquee-container">
         <div className="marquee">
           <img src="/logosColleges/Deogiri.jpg" alt="google" className="logo" />
           <img src="/logosColleges/Dr_BAMU.png" alt="eBay" className="logo" />
@@ -94,7 +94,7 @@ export default function EduventuresTestimonials() {
           <img src="/logosColleges/WIT.webp" alt="Google" className="logo" />
           <img src="/logosColleges/YB_Chavan.png" alt="eBay" className="logo" />
         </div>
-      </div>
+      </div> */}
 
       {/* Title */}
       <h1 className="eduventures-testimonials-title text-6xl">

@@ -3,12 +3,19 @@ import '../global.css';
 
 const MasterClasses = () => {
   const classData = {
-    title: "Become a Maang Engineer",
-    instructor: "By Sayed Mustakim",
+    title: "Roadmap to clinical Research",
+    instructor: "By Mahveen Fatima",
     role: "CEO & Founder",
-    date: "Day, Date",
+    date: "12 Nov 2025 7 PM IST",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   };
+  // for 2nd card 
+  // Master Public Speaking
+  // 08 Nov 2025
+  // 7 PM IST
+  // By Mustakim Syed
+  // Corporate Trainer
+  // Job Oriented Courses with Placement assistance
 
   return (
     <div className="master-classes-container font family-montserrat">

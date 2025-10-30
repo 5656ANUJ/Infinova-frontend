@@ -78,27 +78,27 @@ const Clients = () => {
         <div className="stats-card bg-[#FFF3E3] flex items-center flex-col">
           <Users className="stats-icon" />
 
-          <h3 className="stats-number">10+</h3>
-          <p className="stats-label" id="stats-Team">Teams</p>
+          <h3 className="stats-number">25000+</h3>
+          <p className="stats-label" id="stats-Team">Trainnees</p>
         </div>
        
 
         <div className="stats-card bg-[#FFEEEE] flex items-center flex-col">
           <TrendingUp className="stats-icon" />
-          <h3 className="stats-number">10000+</h3>
-          <p className="stats-label">Happy Students</p>
+          <h3 className="stats-number">100%</h3>
+          <p className="stats-label">Client Satisfaction</p>
         </div>
 
         <div className="stats-card bg-[#E4FAFF] flex items-center flex-col">
           <Award className="stats-icon" />
-          <h3 className="stats-number">5+</h3>
-          <p className="stats-label uppercase">Award Winning</p>
+          <h3 className="stats-number">7+</h3>
+          <p className="stats-label ">Years of Experience</p>
         </div>
 
         <div className="stats-card bg-[#ECE7FF] flex items-center flex-col">
           <Briefcase className="stats-icon" />
-          <h3 className="stats-number">100+</h3>
-          <p className="stats-label">Partners</p>
+          <h3 className="stats-number">200+</h3>
+          <p className="stats-label">Clients</p>
         </div>
       </div>
     </div>
