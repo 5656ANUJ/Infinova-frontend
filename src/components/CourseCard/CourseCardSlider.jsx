@@ -10,6 +10,16 @@ import 'swiper/css/pagination';
 import './CourseCardSlider.css';
 
 const CourseCardSlider = ({ courses }) => {
+  // Calculate how many placeholder cards we need
+  const getPlaceholderCount = () => {
+    const courseCount = courses.length;
+    if (courseCount >= 3) return 0; // No placeholders needed on desktop
+    return 3 - courseCount; // Fill up to 3 cards
+  };
+
+  const placeholderCount = getPlaceholderCount();
+  const placeholders = Array(placeholderCount).fill(null);
+
   return (
     <div className="course-slider-wrapper">
       <Swiper
@@ -23,6 +33,8 @@ const CourseCardSlider = ({ courses }) => {
         pagination={{
           clickable: true,
           el: '.swiper-pagination-custom',
+          bulletClass: 'swiper-pagination-bullet-custom',
+          bulletActiveClass: 'swiper-pagination-bullet-active-custom',
         }}
         breakpoints={{
           768: {
@@ -37,7 +49,7 @@ const CourseCardSlider = ({ courses }) => {
         className="course-swiper"
       >
         {courses.map((course, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={`course-${index}`}>
             <CourseCard 
               image={course.image}
               title={course.title}
@@ -49,6 +61,25 @@ const CourseCardSlider = ({ courses }) => {
             />
           </SwiperSlide>
         ))}
+        
+        {/* Placeholder Cards - Only on desktop when needed */}
+        {placeholders.map((_, index) => (
+          <SwiperSlide key={`placeholder-${index}`} className="placeholder-slide">
+            <div className="course-card-placeholder">
+              <div className="placeholder-content">
+                <div className="placeholder-icon">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke="#cbd5e1" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <p className="placeholder-text">More courses coming soon</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+        
+        {/* Custom Pagination Dots */}
+        <div className="swiper-pagination-custom"></div>
       </Swiper>
 
       {/* Custom Navigation Arrows - Only visible on desktop */}
@@ -62,9 +93,6 @@ const CourseCardSlider = ({ courses }) => {
           <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
-
-      {/* Custom Pagination Dots */}
-      <div className="swiper-pagination-custom"></div>
     </div>
   );
 };
