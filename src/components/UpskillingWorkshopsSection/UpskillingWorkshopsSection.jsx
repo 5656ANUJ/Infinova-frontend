@@ -1,9 +1,9 @@
 import React from 'react';
-import CourseCardSlider from '../../components/CourseCard/CourseCardSlider';
-import './JobOrientedCoursesSection.css';
+import CourseCardSlider from '../CourseCard/CourseCardSlider';
+import './UpskillingWorkshopsSection.css';
 
-const JobOrientedCoursesSection = () => {
-  const jobOrientedCourses = [
+const UpskillingWorkshopsSection = () => {
+  const workshopCourses = [
     {
       image: "path/to/clinical-research-image.jpg",
       title: "Advanced Diploma in Clinical Research",
@@ -15,30 +15,29 @@ const JobOrientedCoursesSection = () => {
     },
     {
       image: "path/to/cyber-security-image.jpg",
-      title: "Advanced Cyber Security",
+      title: "Advanced Cyber security",
       duration: "Duration",
       durationValue: "3 months",
       additionalInfo: "Expected Package",
       additionalInfoValue: "Upto 10 LPA",
       downloadLink: "/brochures/cyber-security.pdf"
     },
-    
   ];
 
   return (
-    <section className="job-oriented-courses-section">
+    <section className="students-upskilling-section">
       <div className="section-header">
         <h2 className="section-title">
-          Job Oriented Courses with Placement Assistance
+          Students' Upskilling Workshops
         </h2>
         <p className="section-description">
-          Launch your career with our industry-focused courses designed to get you job-ready
+          Enhance your skills with our specialized workshops designed for student success
         </p>
       </div>
       
-      <CourseCardSlider courses={jobOrientedCourses} />
+      <CourseCardSlider courses={workshopCourses} />
     </section>
   );
 };
 
-export default JobOrientedCoursesSection;
+export default UpskillingWorkshopsSection;

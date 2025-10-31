@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import EduventuresForUniversitiesNavbar from '../../components/EduventuresForUniversitiesNavbarNew'
 import EduventuresUnversitiessHero from './EduventuresUniversititesHeroNew'
 import EduventuresUniversitiesContact from './EduventuresUniversitiesContact'
+import UpskillingWorkshopsSection from '../components/UpskillingWorkshopsSection/UpskillingWorkshopsSection'
 import EduventuresCourses from './EduventuresCourses'
 import EduventuresTrainers from './EduventuresTrainers'
 import EduventuresTestimonials from './EduventuresTestimonials'
@@ -25,7 +26,8 @@ const EduventuresForUniversities = () => {
     <EduventuresUnversitiessHero scrollToContactForm={scrollToContactForm} />
     <Companies_marquee/>
     <EduventuresUniversitiesContact ref={contactFormRef} />
-    <EduventuresCourses/>
+    {/* <EduventuresCourses/> */}
+    <UpskillingWorkshopsSection/>
     <EduventuresTrainers/>
     <EduventuresTestimonials/>
    </div>
