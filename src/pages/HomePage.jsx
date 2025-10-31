@@ -15,7 +15,7 @@ const HomePage = () => {
     <>
       <div className="home-container">
         <video
-          src="/bgVideo.mp4"
+          src="/bgOfHomeHero.MP4"
           autoPlay
           muted
           loop

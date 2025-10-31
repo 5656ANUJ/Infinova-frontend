@@ -7,6 +7,7 @@ import EduventuresStudentsTestimonials from '../../components/EduventuresStudent
 import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
 import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresForStudentsMasterClassCard'
 import EduventuresCourses from './EduventuresCourses'
+import JobOrientedCoursesSection from '../components/JobOrientedCoursesSection/JobOrientedCoursesSection'
 import { useLocation } from 'react-router-dom';
 
 const EduventuresForStudents = () => {
@@ -31,7 +32,8 @@ const EduventuresForStudents = () => {
       <EduventuresForStudentsHeroSection scrollToBookingForm={scrollToBookingForm} />
       <BookingFormForStudentsEduventures ref={bookingFormRef} />
       <EduventuresForStudentsMAsterClassCard/>
-      <EduventuresCourses/>
+      {/* <EduventuresCourses/> */}
+      <JobOrientedCoursesSection/>
       <EduventuresForStudentsSoftSkills/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
