@@ -179,7 +179,7 @@ const FooterAnuj = () => {
       </style>
 
       {/* ===== Upper Blue Section (Unchanged) ===== */}
-      <div className="footer-upper-section">
+      {/* <div className="footer-upper-section">
         <div className="footer-upper-inner">
           <div className="footer-upper-left">
             <h2>Consulting Agency For Your Business</h2>
@@ -192,7 +192,7 @@ const FooterAnuj = () => {
             <button className="footer-contact-btn">Contact Us</button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ===== Main Lower Section with 3 Columns ===== */}
       <div className="footer-lower-section">
