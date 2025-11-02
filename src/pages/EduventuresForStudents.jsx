@@ -5,6 +5,7 @@ import BookingFormForStudentsEduventures from '../../components/BookingFormForSt
 import EduventuresTrainers from '../../components/EduventuresForStudentsTrainers'
 import EduventuresStudentsTestimonials from '../../components/EduventuresStudentsTestimonials'
 import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
+import SoftSkillsCoursesSection from '../components/SoftSkillsCoursesSection/SoftSkillsCoursesSection'
 import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresForStudentsMasterClassCard'
 import EduventuresCourses from './EduventuresCourses'
 import JobOrientedCoursesSection from '../components/JobOrientedCoursesSection/JobOrientedCoursesSection'
@@ -34,6 +35,7 @@ const EduventuresForStudents = () => {
       <EduventuresForStudentsMAsterClassCard/>
       {/* <EduventuresCourses/> */}
       <JobOrientedCoursesSection/>
+      <SoftSkillsCoursesSection/>
       <EduventuresForStudentsSoftSkills/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
