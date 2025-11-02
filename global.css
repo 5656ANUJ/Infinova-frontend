@@ -185,6 +185,7 @@ ion-icon {
   }
   .logo-track {
     gap: 20px;
+    animation: scroll 10s linear infinite;
   }
 }
 
@@ -194,6 +195,7 @@ ion-icon {
   }
   .logo-track {
     gap: 15px;
+    animation: scroll 5s linear infinite;
   }
 }
 
