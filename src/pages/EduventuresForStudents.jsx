@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Navbar from '../../components/EduventuresForStudentsNavbarNew'
 import EduventuresForStudentsHeroSection from '../../components/EduventuresForStudentsHeroSectionNew'
 import BookingFormForStudentsEduventures from '../../components/BookingFormForStudentsEduventures'
+import TrainerCard from '../components/TrainerCard/TrainerCard'
 import EduventuresTrainers from '../../components/EduventuresForStudentsTrainers'
 import EduventuresStudentsTestimonials from '../../components/EduventuresStudentsTestimonials'
 import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
@@ -37,6 +38,7 @@ const EduventuresForStudents = () => {
       <JobOrientedCoursesSection/>
       <SoftSkillsCoursesSection/>
       <EduventuresForStudentsSoftSkills/>
+      <TrainerCard image={"/dummy_trainer.jpg"} name={"Ajay"} title={"CEO"} verified={1} experience={"5 years"} expertise={"Web Developer"}description={"I am a Good Guy and i am a Placeholder for the trainers section card . I hope i dont cause trouble"}/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
     </div>

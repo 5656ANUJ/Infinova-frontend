@@ -1,0 +1,142 @@
+.trainer-card {
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  padding: 24px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.trainer-image-section {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.trainer-image-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.trainer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trainer-header {
+  text-align: left;
+}
+
+.trainer-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trainer-title {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin: 0;
+}
+
+.trainer-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.badge-experience {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.badge-expertise {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.trainer-description {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trainer-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  .trainer-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .trainer-header {
+    text-align: center;
+  }
+  
+  .trainer-badges {
+    justify-content: center;
+  }
+  
+  .trainer-description {
+    text-align: center;
+  }
+  
+  .trainer-name {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+}
