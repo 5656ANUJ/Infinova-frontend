@@ -39,8 +39,8 @@ const TrainerCard = ({
         </div>
         
         <div className="trainer-badges">
-          <span className="badge badge-experience">{experience}</span>
-          <span className="badge badge-expertise">{expertise}</span>
+          <span className="badge">{experience}</span>
+          <span className="badge">{expertise}</span>
         </div>
         
         <p className="trainer-description">{description}</p>

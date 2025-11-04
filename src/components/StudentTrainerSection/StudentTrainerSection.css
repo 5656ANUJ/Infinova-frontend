@@ -1,0 +1,69 @@
+.student-trainers-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  margin: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.highlight-text {
+  color: #2563eb;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .student-trainers-section {
+    padding: 40px 0;
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .student-trainers-section {
+    padding: 30px 0;
+    margin: 30px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-description {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
