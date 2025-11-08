@@ -21,7 +21,7 @@ const DivisionsPage = () => {
             onClick={() => navigate('/eduventures')}
           >
             <img
-              src="/eduventures.png"
+              src="/Edu_Logo.svg"
               alt="Eduventures"
               className="division-logo-img"
             />
@@ -58,7 +58,7 @@ const DivisionsPage = () => {
             onClick={() => navigate('/coming-soon')}
           >
             <img
-              src="/CON_Logo.png"
+              src="/CON_Logo.svg"
               alt="Consultants"
               className="division-logo-img"
             />
@@ -95,7 +95,7 @@ const DivisionsPage = () => {
             onClick={() => navigate('/coming-soon')}
           >
             <img
-              src="/TECH_Logo.png"
+              src="/TECH_Logo.svg"
               alt="Technologies"
               className="division-logo-img"
             />

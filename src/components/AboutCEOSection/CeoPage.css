@@ -1,0 +1,174 @@
+/* =====================================
+   CEO PAGE STYLING (FINAL)
+   ===================================== */
+
+/* Outer container */
+.ceo-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  overflow: hidden;
+  min-height: 100vh; /* Ensures it fills the screen vertically */
+  margin: -50px 0 0 0;
+}
+
+/* Inner layout - THIS IS THE WHITE CARD */
+.ceo-inner2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1000px;
+  width: 92%;
+  gap: 40px;
+  background-color: #eaecfb;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* ==============================
+   IMAGE SECTION
+   ============================== */
+.ceo-image2 {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ceo-img2 {
+  width: 90%;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.ceo-img2:hover {
+  transform: scale(1.05);
+}
+
+/* ==============================
+   CONTENT SECTION
+   ============================== */
+.ceo-content2 {
+  flex: 1.5; 
+  display: flex;
+  flex-direction: column;
+  /* --- 1. CONTENT CONTAINER CENTERED --- */
+  align-items: center;
+  text-align: center;
+}
+
+.ceo-heading2 {
+  display: flex;
+  gap: 10px;
+  /* --- 2. HEADING CENTERED --- */
+  justify-content: center;
+  align-items: baseline;
+}
+
+.ceo-heading2 h1 {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.ceo-heading2 .highlight2 {
+  color: #1289e4;
+}
+
+.ceo-text2 {
+  margin-top: 20px;
+  max-width: 600px;
+  color: #053c66;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+  /* --- 3. PARAGRAPH TEXT CENTERED --- */
+  text-align: justify;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+@media (max-width: 1024px) {
+  .ceo-inner2 {
+    gap: 30px;
+    padding: 30px;
+  }
+  .ceo-heading2 h1 {
+    font-size: 40px;
+  }
+  .ceo-text2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ceo-inner2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .ceo-image2,
+  .ceo-content2 {
+    width: 100%;
+    padding-top: 25px;
+  }
+  
+  .ceo-content2 {
+    align-items: center; 
+    text-align: center;
+  }
+  
+  .ceo-heading2 {
+    justify-content: center;
+  }
+
+  .ceo-container2 {
+    padding: 40px 15px;
+  }
+
+  .ceo-img2 {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .ceo-heading2 h1 {
+    font-size: 36px;
+  }
+
+  .ceo-text2 {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-inner2 {
+    padding: 20px;
+  }
+  .ceo-heading2 h1 {
+    font-size: 28px;
+  }
+
+  .ceo-text2 {
+    font-size: 15px;
+  }
+
+  .ceo-img2 {
+    width: 80%;
+    padding-top: 10px;
+  }
+  .card .division-info-img {
+    width: 90px;
+  }
+}
