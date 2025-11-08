@@ -185,6 +185,7 @@ ion-icon {
   }
   .logo-track {
     gap: 20px;
+    animation: scroll 10s linear infinite;
   }
 }
 
@@ -194,6 +195,7 @@ ion-icon {
   }
   .logo-track {
     gap: 15px;
+    animation: scroll 5s linear infinite;
   }
 }
 
@@ -924,16 +926,42 @@ ion-icon {
   gap: 40px;
   align-items: center;
 }
+@media (min-width: 344px){
+  .contactus-page-container{
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 360px){
+  .contactus-page-container{
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 480px){
+  .contactus-page-container{
+    margin-top: 0rem;
+  }
+}
 
 @media (min-width: 768px) {
   .contactus-page-container{
-    margin-top: -0.5rem;
+    margin-top: 0rem;
   }
   .contactus-content {
     flex-direction: row;
     justify-content: center;
   }
 }
+@media (min-width: 820px){
+  .contactus-page-container{
+    margin-top: 9rem;
+  }
+}
+@media (min-width: 1024px){
+  .contactus-page-container{
+    margin-top: 5%;
+  }
+}
+
 
 /* Cards */
 .contactus-info-card,
