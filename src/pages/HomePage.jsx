@@ -1,7 +1,7 @@
 import React from 'react';
 import DivisionsPage from './DivisionsPage';
-import AboutUs from './AboutUs';
-import CeoPage from './CeoPage';
+import AboutUs from '../components/AboutUsSection/AboutUs.jsx';  //add the about us section
+import CeoPage from '../components/AboutCEOSection/CeoPage.jsx'; //add about CEO section
 import AboutCEO from './AboutCEO';
 import Clients from './Clients';
 

@@ -324,6 +324,7 @@ ion-icon {
 .card .division-info-img{
   margin-left: 10px;
   padding:20px;
+  width: 90px;
   
   
 }
@@ -476,7 +477,7 @@ ion-icon {
     max-width: 100%;
   }
   .division-logo-card img{
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     height: 5em;
   }
@@ -3349,6 +3350,7 @@ ion-icon {
   width: 100%;
   max-width: 500px;
   margin-top: 20px;
+  display: none;
 }
 
 .email-form {
