@@ -117,10 +117,7 @@ const TrainersGrid = ({ trainers, showViewAll = true, desktopCount = 4, mobileCo
               animate="visible"
               exit="exit"
               layout
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 }
-              }}
+              // REMOVED whileHover - No hover effect for CTA card
             >
               <div className="trainer-card trainer-card-cta">
                 <div className="trainer-card-cta-content">

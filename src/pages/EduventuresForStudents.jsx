@@ -38,10 +38,9 @@ const EduventuresForStudents = () => {
       {/* <EduventuresCourses/> */}
       <JobOrientedCoursesSection/>
       <SoftSkillsCoursesSection/>
-      <EduventuresForStudentsSoftSkills/>
+      {/* <EduventuresForStudentsSoftSkills/> */}
       {/* <TrainerCard image={"/dummy_trainer.jpg"} name={"Ajay"} title={"CEO"} verified={1} experience={"5 years"} expertise={"Web Developer"}description={"I am a Good Guy and i am a Placeholder for the trainers section card . I hope i dont cause trouble"}/> */}
       <StudentTrainersSection/>
-      <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
     </div>
   )
