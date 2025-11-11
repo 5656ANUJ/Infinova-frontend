@@ -13,7 +13,7 @@
   padding: 40px 80px;
 }
 
-/* CTA Card Styling */
+/* CTA Card Styling - COMPLETELY STATIC */
 .trainer-card-cta {
   background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%) !important;
   border: 2px dashed #2563eb !important;
@@ -22,23 +22,31 @@
   align-items: center !important;
   justify-content: center !important;
   min-height: 320px;
-  cursor: default;
+  cursor: default !important;
   padding: 30px !important;
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  pointer-events: none; /* Disable all pointer interactions */
 }
 
+/* Override ANY hover effects */
 .trainer-card-cta:hover {
-  background: linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%) !important;
-  border-color: #1d4ed8 !important;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.25) !important;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%) !important;
+  border-color: #2563eb !important;
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
 }
 
+/* Re-enable pointer events for content inside (in case needed) */
 .trainer-card-cta-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   text-align: center;
+  pointer-events: auto; /* Re-enable for text selection if needed */
 }
 
 .trainer-card-cta-icon {
@@ -66,7 +74,6 @@
   line-height: 1.6;
   max-width: 280px;
 }
-
 
 /* View All Button */
 .view-all-button-container {

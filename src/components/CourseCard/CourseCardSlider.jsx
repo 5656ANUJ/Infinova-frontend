@@ -3,18 +3,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import CourseCard from './CourseCard';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './CourseCardSlider.css';
 
 const CourseCardSlider = ({ courses }) => {
-  // Calculate how many placeholder cards we need
   const getPlaceholderCount = () => {
     const courseCount = courses.length;
-    if (courseCount >= 3) return 0; // No placeholders needed on desktop
-    return 3 - courseCount; // Fill up to 3 cards
+    if (courseCount >= 3) return 0;
+    return 3 - courseCount;
   };
 
   const placeholderCount = getPlaceholderCount();
@@ -61,7 +59,7 @@ const CourseCardSlider = ({ courses }) => {
             />
           </SwiperSlide>
         ))}
-        
+
         {/* Placeholder Cards - Only on desktop when needed */}
         {placeholders.map((_, index) => (
           <SwiperSlide key={`placeholder-${index}`} className="placeholder-slide">
@@ -69,7 +67,7 @@ const CourseCardSlider = ({ courses }) => {
               <div className="placeholder-content">
                 <div className="placeholder-icon">
                   <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke="#cbd5e1" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke="#1d4ed8" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </div>
                 <p className="placeholder-text">More courses coming soon</p>
@@ -77,7 +75,7 @@ const CourseCardSlider = ({ courses }) => {
             </div>
           </SwiperSlide>
         ))}
-        
+
         {/* Custom Pagination Dots */}
         <div className="swiper-pagination-custom"></div>
       </Swiper>
