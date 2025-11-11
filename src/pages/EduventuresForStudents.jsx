@@ -11,9 +11,11 @@ import SoftSkillsCoursesSection from '../components/SoftSkillsCoursesSection/Sof
 import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresForStudentsMasterClassCard'
 import EduventuresCourses from './EduventuresCourses'
 import JobOrientedCoursesSection from '../components/JobOrientedCoursesSection/JobOrientedCoursesSection'
+import StudentTestimonialsSection from '../components/StudentTestimonialsSection/StudentTestimonialsSection'
 import { useLocation } from 'react-router-dom';
 
 const EduventuresForStudents = () => {
+
   const location = useLocation();
   const bookingFormRef = useRef(null); // Create ref for booking form
 
@@ -41,7 +43,8 @@ const EduventuresForStudents = () => {
       {/* <EduventuresForStudentsSoftSkills/> */}
       {/* <TrainerCard image={"/dummy_trainer.jpg"} name={"Ajay"} title={"CEO"} verified={1} experience={"5 years"} expertise={"Web Developer"}description={"I am a Good Guy and i am a Placeholder for the trainers section card . I hope i dont cause trouble"}/> */}
       <StudentTrainersSection/>
-      <EduventuresStudentsTestimonials/>
+      <StudentTestimonialsSection/>
+      {/* <EduventuresStudentsTestimonials/> */}
     </div>
   )
 }

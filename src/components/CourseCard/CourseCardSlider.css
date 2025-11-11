@@ -26,7 +26,7 @@
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  top: 50%;
+  top: 40%; /* Adjusted from 50% to account for pagination space */
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
