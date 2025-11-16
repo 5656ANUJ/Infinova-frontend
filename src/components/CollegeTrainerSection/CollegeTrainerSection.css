@@ -1,8 +1,8 @@
 .college-trainers-section {
-  padding: 60px 0;
+  padding-top: 40px;
   background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
   border-radius: 24px;
-  margin: 60px 80px; /* Added left and right margin */
+  margin: 10px 80px; /* Added left and right margin */
 }
 
 .college-trainer-section-header {
@@ -50,7 +50,7 @@
 /* Mobile View */
 @media (max-width: 768px) {
   .college-trainers-section {
-    padding: 30px 0;
+    padding-top: 30px;
     margin: 30px 20px; /* Smaller margin on mobile */
   }
   
