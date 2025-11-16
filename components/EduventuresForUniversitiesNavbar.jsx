@@ -14,7 +14,7 @@ export default function EduventuresForUniversitiesNavbar() {
       {/* Left: Logo */}
       <div className="eduventuresForUniversityNavbarLeft">
         <img
-          src="/eduventures.png"
+          src="/Edu_Logo.svg"
           alt="Infinova Eduventures"
           className="eduventuresForUniversityNavbarLogo"
         />

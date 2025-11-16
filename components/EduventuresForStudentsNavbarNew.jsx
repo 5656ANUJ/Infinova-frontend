@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../global.css';
-import logoImage from '/eduventures.png';
+import logoImage from '/Edu_Logo.svg';
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
