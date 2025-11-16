@@ -55,7 +55,7 @@
 /* Mobile View */
 @media (max-width: 768px) {
   .job-oriented-courses-section {
-    padding: 40px 0;
+    padding-top: 0px;
   }
   
   .section-header {
