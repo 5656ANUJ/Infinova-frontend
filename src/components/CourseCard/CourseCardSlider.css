@@ -131,13 +131,13 @@
 
 /* Tablet View */
 @media (max-width: 1024px) {
-  .course-slider-wrapper { padding: 40px 40px; }
+  .course-slider-wrapper { padding: 0px 40px; }
   .swiper-button-prev-custom,
   .swiper-button-next-custom { display: none; }
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
-  .course-slider-wrapper { padding: 30px 20px; }
+  .course-slider-wrapper { padding: 0px 20px; }
   .swiper-pagination-custom { margin-top: 40px !important; }
 }
