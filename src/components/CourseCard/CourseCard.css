@@ -3,11 +3,13 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
+  /* max-width: 350px; REMOVE */
+  width: 100%; /* Match the slide width */
   height: 100%; /* Make card fill the slide height */
   display: flex; /* Enable flexbox */
   flex-direction: column; /* Stack children vertically */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Prevent overflow off-by-1 */
 }
 
 .course-card:hover {
@@ -22,6 +24,7 @@
   border-radius: 20px 20px 0 0;
   padding: 15px;
   flex-shrink: 0; /* Prevent image from shrinking */
+  box-sizing: border-box;
 }
 
 .course-image {
@@ -36,6 +39,7 @@
   display: flex; /* Enable flexbox for content */
   flex-direction: column; /* Stack children vertically */
   flex-grow: 1; /* Take up remaining space */
+  box-sizing: border-box;
 }
 
 .course-title {

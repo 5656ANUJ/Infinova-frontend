@@ -1,5 +1,5 @@
 .soft-skills-courses-section {
-  padding: 60px 0;
+  padding-top: 60px;
   background: transparent;
 }
 
@@ -43,7 +43,7 @@
 /* Mobile View */
 @media (max-width: 768px) {
   .soft-skills-courses-section {
-    padding: 40px 0;
+    padding-top: 10px;
   }
   
   .section-header {

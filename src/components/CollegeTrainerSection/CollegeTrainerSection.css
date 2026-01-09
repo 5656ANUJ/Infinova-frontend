@@ -1,20 +1,20 @@
-.student-trainers-section {
-  padding-top: 60px;
+.college-trainers-section {
+  padding-top: 40px;
   background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
   border-radius: 24px;
-  margin: 60px 80px; /* Added left and right margin */
+  margin: 10px 80px; /* Added left and right margin */
 }
 
-.section-header {
+.college-trainer-section-header {
   text-align: center;
   margin-bottom: 50px;
   padding: 0 20px;
 }
 
-.section-title {
+.college-trainer-section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0056D2;
   margin-bottom: 15px;
   line-height: 1.2;
 }
@@ -23,7 +23,7 @@
   color: #2563eb;
 }
 
-.section-description {
+.college-trainer-section-description {
   font-size: 1.125rem;
   color: #475569;
   max-width: 600px;
@@ -33,36 +33,36 @@
 
 /* Tablet View */
 @media (max-width: 1024px) {
-  .student-trainers-section {
+  .college-trainers-section {
     padding: 40px 0;
     margin: 40px 40px; /* Adjusted for tablet */
   }
   
-  .section-title {
+  .college-trainer-section-title {
     font-size: 2rem;
   }
   
-  .section-description {
+  .college-trainer-section-description {
     font-size: 1rem;
   }
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
-  .student-trainers-section {
-    padding-top: 0px;
+  .college-trainers-section {
+    padding-top: 30px;
     margin: 30px 20px; /* Smaller margin on mobile */
   }
   
-  .section-header {
+  .college-trainer-section-header {
     margin-bottom: 30px;
   }
   
-  .section-title {
+  .college-trainer-section-title {
     font-size: 1.75rem;
   }
   
-  .section-description {
+  .college-trainer-section-description {
     font-size: 0.95rem;
     padding: 0 10px;
   }

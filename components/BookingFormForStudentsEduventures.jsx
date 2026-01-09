@@ -100,7 +100,7 @@ const BookingForm = forwardRef((props, ref) => {
     <div className="booking-container" ref={ref}>
       <div className="booking-card EduventuresUniversitiesContactBox bg-blue-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between w-full max-w-5xl">
         <h1 className="booking-title">
-          Book a <span className="text-blue">Free</span> LIVE Class Today !
+          Book a <span className="text-blue">Free</span> LIVE Class Today!
         </h1>
 
         <div className="form-container font-family:montserrat">

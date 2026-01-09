@@ -3,8 +3,8 @@ import EduventuresForUniversitiesNavbar from '../../components/EduventuresForUni
 import EduventuresUnversitiessHero from './EduventuresUniversititesHeroNew'
 import EduventuresUniversitiesContact from './EduventuresUniversitiesContact'
 import UpskillingWorkshopsSection from '../components/UpskillingWorkshopsSection/UpskillingWorkshopsSection'
-import EduventuresCourses from './EduventuresCourses'
-import EduventuresTrainers from './EduventuresTrainers'
+import CollegeTrainersSection from '../components/CollegeTrainerSection/CollegeTrainerSection'
+import CollegeTestimonialsSection from '../components/CollegeTestimonialsSection/CollegeTestimonialsSection'
 import EduventuresTestimonials from './EduventuresTestimonials'
 import Companies_marquee from '../components/Companies_marquee'
 
@@ -28,8 +28,9 @@ const EduventuresForUniversities = () => {
     <EduventuresUniversitiesContact ref={contactFormRef} />
     {/* <EduventuresCourses/> */}
     <UpskillingWorkshopsSection/>
-    <EduventuresTrainers/>
-    <EduventuresTestimonials/>
+    <CollegeTrainersSection/>
+    <CollegeTestimonialsSection />
+    {/* <EduventuresTestimonials/> */}
    </div>
    </>
   )

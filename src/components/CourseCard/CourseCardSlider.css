@@ -2,24 +2,31 @@
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 80px;
+  padding: 0px 80px;
 }
 
 .course-swiper {
   padding-bottom: 60px;
 }
 
-/* Make all slides equal height */
+/* Make all slides equal height and ensure child fills width */
 .course-swiper .swiper-slide {
-  height: auto !important; /* Allow slide to grow */
-  display: flex; /* Enable flexbox */
+  height: auto !important;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Ensure the direct child (card or placeholder) fills slide width */
+.course-swiper .swiper-slide > * {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Custom Navigation Arrows */
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  top: 50%;
+  top: 40%; /* Adjusted from 50% to account for pagination space */
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -40,13 +47,8 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-.swiper-button-prev-custom {
-  left: 10px;
-}
-
-.swiper-button-next-custom {
-  right: 10px;
-}
+.swiper-button-prev-custom { left: 10px; }
+.swiper-button-next-custom { right: 10px; }
 
 .swiper-button-prev-custom.swiper-button-disabled,
 .swiper-button-next-custom.swiper-button-disabled {
@@ -55,43 +57,46 @@
 }
 
 /* Placeholder Card Styling */
-.placeholder-slide {
-  display: none;
-}
+.placeholder-slide { display: none; }
 
 /* Show placeholder only on desktop */
 @media (min-width: 1024px) {
-  .placeholder-slide {
-    display: block;
-  }
+  .placeholder-slide { display: block; }
 }
 
 .course-card-placeholder {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-radius: 20px;
-  border: 2px dashed #cbd5e1;
-  max-width: 350px;
+  border: 2px dashed #2563eb;
+  width: 100%;
   height: 100%;
   min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 40px 20px;
 }
 
 .placeholder-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
-  opacity: 0.5;
 }
 
 .placeholder-text {
   font-size: 1.125rem;
-  color: #94a3b8;
+  color: #1d4ed8;
   font-weight: 600;
 }
 
@@ -126,23 +131,13 @@
 
 /* Tablet View */
 @media (max-width: 1024px) {
-  .course-slider-wrapper {
-    padding: 40px 40px;
-  }
-
+  .course-slider-wrapper { padding: 0px 40px; }
   .swiper-button-prev-custom,
-  .swiper-button-next-custom {
-    display: none;
-  }
+  .swiper-button-next-custom { display: none; }
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
-  .course-slider-wrapper {
-    padding: 30px 20px;
-  }
-  
-  .swiper-pagination-custom {
-    margin-top: 40px !important;
-  }
+  .course-slider-wrapper { padding: 0px 20px; }
+  .swiper-pagination-custom { margin-top: 40px !important; }
 }
