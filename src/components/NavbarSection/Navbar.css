@@ -1,0 +1,349 @@
+/* ======================================= */
+/* 1. Main Navbar Container (.outerNavDiv) */
+/* ======================================= */
+.outerNavDiv {
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* ======================================= */
+/* 2. Sidebar Overlay & Menu (.overlay, .menu) */
+/* ======================================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  transition: opacity 300ms ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu {
+  height: 100vh;
+  background-color: white;
+  z-index: 50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 70vw;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+.menu.open {
+  transform: translateX(0);
+}
+
+/* ======================================= */
+/* 3. Sidebar Content (.logoDiv, .menuList) */
+/* ======================================= */
+.logoDiv {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.close {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+.close-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.navbarImage {
+  width: 60%;
+  margin-left: auto;
+}
+
+.menuList {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 85%;
+  font-size: 1.875rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 1.5rem 1rem;
+  padding-left: 4rem;
+  background-color: #f3f4f6;
+}
+
+.listItems {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  text-align: left;
+  color: #1f2937;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+.listItems:hover {
+  color: #2563eb;
+}
+
+/* ======================================= */
+/* 4. Top Navbar Content (.innerNavDiv) */
+/* ======================================= */
+.innerNavDiv {
+  height: 100%;
+  width: 95%;
+  max-width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.navbar-left-group {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.hamburgerIcon2 {
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 50px;
+  height: 35px;
+  filter: brightness(0) saturate(100%);
+  cursor: pointer;
+}
+.hamburger-icon-img {
+  width: 50px;
+  height: 35px;
+  margin: 0px 0px 0px -90px;
+}
+
+.globalIcon2 {
+  margin: 0px 0px 0px -60px;
+  width: 20vw;
+  height: 70px;
+  object-fit: contain;
+  max-height: 10vh;
+  cursor: pointer;
+}
+
+/* ======================================= */
+/* 5. Desktop Navbar List (.navbarList)  */
+/* ======================================= */
+.navbarList2 {
+  height: 100%;
+  width: 60%;
+  display: none; /* Hidden by default */
+}
+
+.navbarList2 ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  color: #1f2937;
+  font-weight: 500;
+  gap: 2vw;
+}
+
+.navbarList2 li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+.navbarList2 li:hover {
+  color: #2563eb;
+}
+
+/* ======================================= */
+/* 6. Responsive Media Queries */
+/* ======================================= */
+
+/* --- CORRECTED LOGIC --- */
+/* For DESKTOP screens ONLY */
+@media (min-width: 1024px) {
+  .navbarList2 {
+    display: block; /* Show desktop links */
+  }
+  
+
+  /* Clean up margins for desktop */
+  .hamburger-icon-img {
+    margin: 0;
+  }
+  .globalIcon2 {
+    margin: 0;
+    width: 200px;
+  }
+  .navbar-left-group {
+    gap: 1.5rem;
+  }
+}
+/* --- END CORRECTED LOGIC --- */
+
+/* Extra-large screens */
+@media (min-width: 1280px) {
+  .navbarList2 ul {
+    font-size: 1.25rem;
+  }
+}
+
+/* Medium screens (TABLETS) */
+/* This rule will now apply, showing the hamburger icon */
+@media (min-width: 768px) {
+  .menu {
+    width: 30vw;
+  }
+  .navbarImage {
+    width: 80%;
+  }
+  .innerNavDiv {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .navbar-left-group {
+    width: 25%;
+    /* We add these rules here to fix spacing on tablets */
+    gap: 1.5rem;
+  }
+  .globalIcon2 {
+    margin: 0;
+    width: 200px;
+  }
+  .hamburgerIcon2 {
+    margin: 0;
+  }
+   .hamburger-icon-img {
+    margin: 0;
+    width: 40px;
+    height: 30px;
+  }
+}
+
+/* Small screens */
+@media (min-width: 640px) {
+  .menu {
+    width: 25vw;
+  }
+  .navbarImage {
+    width: 70%;
+  }
+  .menuList {
+    font-size: 1.25rem;
+  }
+  .innerNavDiv {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar-left-group {
+    gap: 2rem;
+    width: 40%;
+  }
+}
+
+/* Mobile-specific overrides */
+@media (max-width: 768px) {
+  .outerNavDiv {
+    position: relative !important;
+    background: rgba(232, 228, 228, 0.35) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    height: 60px !important;
+  }
+  
+  
+  .hamburgerIcon2 {
+    width: 30px;
+    height: 25px;
+    margin-top: 2px;
+    margin-left: 14px;
+  }
+  .globalIcon2 {
+    margin: 0 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .close {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .logoDiv {
+    padding: 0.5rem;
+  }
+  .menuList {
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: 14px;
+  }
+  .listItems {
+    padding: 0.3rem 0;
+  }
+}
+
+/* Final mobile cleanup */
+@media (max-width: 768px) {
+  .hamburger-icon-img {
+    width: 30px;
+    height: 15px;
+  }
+  .menu {
+    width: 250px;
+  }
+  .hamburger-icon-img {
+    margin: 0 0 0 0;
+  }
+  .globalIcon2 {
+    width: 50vw;
+    height: 50px;
+  }
+}
+@media (min-width: 1400px) {
+    .hamburger-icon-img, .ham {
+    filter: brightness(0) saturate();
+    width: 50px;
+    height: 35px;
+    margin-top: 3px;
+    margin-left: -75px;
+    }
+    .globalIcon2{
+    width: 20vw;
+    height: 60px;
+    margin-top: 3px;
+    margin-left: -70px;
+    }
+}
